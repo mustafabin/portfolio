@@ -1,9 +1,10 @@
 import "./styles/App.css";
 import { Routes, Route } from "react-router-dom";
-
+import Navbar from "./components/Nav.jsx";
 function App() {
   return (
     <>
+      <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<h1>Landing</h1>}></Route>
         <Route path="/aboutme" element={<h1>About</h1>}></Route>
