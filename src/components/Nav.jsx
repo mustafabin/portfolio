@@ -1,26 +1,35 @@
-import React from "react";
-import WhiteBrandVideo from "../media/white-brand-video.mp4";
-import DarkBrandVideo from "../media/dark-brand-video.mp4";
-import { useSelector, useDispatch } from "react-redux";
-import { toggleValue } from "../redux/mode.js";
+import React, { useState, useEffect } from "react";
+
+import MoblieNav from "./MoblieNav.jsx";
+import DefaultNav from "./DefaultNav.jsx";
 import "../styles/Nav.css";
+
 export default function Nav() {
-  const dispatch = useDispatch();
-  const mode = useSelector((state) => state.mode.value);
-  return (
-    <div className="navbar">
-      <div className="nav-brand-container">
-        <video
-          src={WhiteBrandVideo}
-          muted
-          autoPlay
-          className="nav-brand-video"
-        ></video>
-      </div>
-      <div className="nav-link-container">
-        <h1>{mode}</h1>
-        <button onClick={() => dispatch(toggleValue())}> toggle </button>
-      </div>
-    </div>
-  );
+  const [content, setContent] = useState(null);
+  const [navClass, setNavClass] = useState("");
+  let lastScrollY = window.scrollY;
+  window.addEventListener("scroll", () => {
+    if (lastScrollY < window.scrollY) {
+      setNavClass("nav--hidden");
+    } else {
+      setNavClass("");
+    }
+    lastScrollY = window.scrollY;
+  });
+
+  let handleRezise = () => {
+    if (window.innerWidth <= 550) {
+      setContent(<MoblieNav></MoblieNav>);
+    } else {
+      setContent(<DefaultNav></DefaultNav>);
+    }
+  };
+  useEffect(() => {
+    handleRezise();
+    window.addEventListener("resize", handleRezise);
+    return () => {
+      window.removeEventListener("resize", handleRezise);
+    };
+  }, []);
+  return <div className={`navbar ${navClass}`}>{content}</div>;
 }

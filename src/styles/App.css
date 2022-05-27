@@ -1,0 +1,8 @@
+p,
+h1,
+span {
+  color: var(--text-color);
+}
+#root {
+  background-color: var(--main-color);
+}
