@@ -20,6 +20,9 @@ export default function MoblieNav() {
     dispatch(toggleValue());
     nav.current.classList.toggle("moblie-nav-open");
     setTimeout(() => {
+      document.body
+        .querySelector(".Typewriter__cursor")
+        .classList.toggle("Typewriter__kill-animation");
       navItems.current.classList.toggle("show-moblie-nav-items");
     }, 450);
   };
