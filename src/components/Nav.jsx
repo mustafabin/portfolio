@@ -18,7 +18,7 @@ export default function Nav() {
   });
 
   let handleRezise = () => {
-    if (window.innerWidth <= 550) {
+    if (window.innerWidth <= 650) {
       setContent(<MoblieNav></MoblieNav>);
     } else {
       setContent(<DefaultNav></DefaultNav>);

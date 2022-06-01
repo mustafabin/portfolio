@@ -4,15 +4,15 @@ import HomeIcon from "@mui/icons-material/Home";
 import FolderIcon from "@mui/icons-material/Folder";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ArticleIcon from "@mui/icons-material/Article";
-import WhiteBrandVideo from "../media/white-brand-video.mp4";
-import DarkBrandVideo from "../media/dark-brand-video.mp4";
+import WhiteBrandVideo from "../media/white-brand.gif";
+import DarkBrandVideo from "../media/dark-brand.gif";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { toggleValue } from "../redux/mode.js";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
 import { useSelector, useDispatch } from "react-redux";
 
-const MaterialUISwitch = styled(Switch)(({ theme }) => ({
+export const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
   padding: 7,
@@ -65,28 +65,31 @@ export default function DefaultNav() {
   return (
     <>
       <div className="nav-brand-container">
-        <video
+        <img
           src={mode === "Light" ? WhiteBrandVideo : DarkBrandVideo}
-          muted
-          autoPlay
+          alt="brand"
           className="nav-brand-video"
-        ></video>
+        ></img>
       </div>
       <div className="nav-link-container">
         <HashLink to="/">
           <HomeIcon fontSize="large"></HomeIcon>
+          Home
         </HashLink>
         <HashLink to="/">
           <AccountCircleIcon fontSize="large"></AccountCircleIcon>
+          About
         </HashLink>
         <HashLink to="/">
           <FolderIcon fontSize="large"></FolderIcon>
+          Projects
         </HashLink>
         <HashLink
           to="/
 resume"
         >
           <ArticleIcon fontSize="large"></ArticleIcon>
+          Resume
         </HashLink>
       </div>
       <div className="nav-mode-switch">
@@ -94,6 +97,11 @@ resume"
           onChange={() => dispatch(toggleValue())}
           control={
             <MaterialUISwitch
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  dispatch(toggleValue());
+                }
+              }}
               sx={{ m: 1 }}
               checked={mode === "Light" ? true : false}
             />

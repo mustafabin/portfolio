@@ -1,9 +1,10 @@
 :root {
-  --main-color: #ffffff;
-  --dark-main-color: #ffffff;
-  --action-color: #d438ff;
-  --sub-action-color: #07d9d9;
-  --text-color: black;
+  --main-color: #2a2f40;
+  --dark-main-color: #212831;
+  --splash-color: #7a2605;
+  --action-color: #ff8900;
+  --sub-action-color: #00feff;
+  --text-color: white;
 }
 body {
   margin: 0;

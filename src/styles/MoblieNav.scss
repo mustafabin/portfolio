@@ -1,0 +1,167 @@
+@function circumference($r) {
+  $pi: 3.141592653;
+  @return 2 * $pi * $r;
+}
+.moblie-nav-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+}
+.moblie-nav-burger {
+  width: 40%;
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.moblie-nav-brand-container {
+  max-width: 5rem;
+  // border: 1px solid red;
+  max-height: 5rem;
+  margin-left: 30%;
+}
+.menuicon {
+  display: block;
+  cursor: pointer;
+  color: var(--action-color);
+  border-radius: 50%;
+  transform: rotate(0deg);
+  transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 2;
+  margin-right: 1rem;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  &:hover,
+  &:focus {
+    background-color: rgba(50, 161, 241, 0.274);
+  }
+  &__bar,
+  &__circle {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+  &__bar {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-in-out;
+  }
+  &__circle {
+    transition: stroke-dashoffset 0.3s linear 0.1s;
+    stroke-dashoffset: circumference(23); // 23 is the <circle>'s radius
+    stroke-dasharray: circumference(23);
+  }
+}
+
+.splash {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 1px;
+  height: 1px;
+  z-index: 1;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--splash-color);
+    border: 10px solid var(--action-color);
+
+    // screen diameter can be 142vmax at most,
+    // circle needs to be twice that size to cover it
+    width: 284vmax;
+    height: 284vmax;
+    top: -142vmax;
+    left: -142vmax;
+
+    transform: scale(0);
+    transform-origin: 50% 50%;
+    transition: transform 0.55s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+
+    // will-change tells the browser we plan to
+    // animate this property in the near future
+    will-change: transform;
+  }
+}
+.moblie-nav-links-container {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.moblie-nav-links {
+  // border: 1px solid red;
+  opacity: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 70%;
+  transition: all ease 0.65s;
+}
+.show-moblie-nav-items {
+  opacity: 1;
+  display: flex;
+}
+.moblie-nav-links a {
+  color: var(--action-color);
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  & p {
+    color: var(--action-color);
+    padding-left: 1rem;
+  }
+  &:hover {
+    background-color: var(--main-color);
+    & p {
+      color: var(--sub-action-color);
+    }
+    color: var(--sub-action-color);
+  }
+}
+
+.moblie-nav-open {
+  //scale the background circle to full size
+  > .splash::after {
+    transform: scale(1);
+  }
+  //animate the menu icon
+  .menuicon {
+    color: var(--action-color);
+    transform: rotate(180deg);
+
+    &__circle {
+      stroke-dashoffset: 0;
+    }
+    &__bar:nth-child(1),
+    &__bar:nth-child(4) {
+      opacity: 0;
+    }
+    &__bar:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    &__bar:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+.moblie-nav-switch {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

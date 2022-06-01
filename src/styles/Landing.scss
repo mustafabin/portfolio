@@ -1,0 +1,42 @@
+.landing {
+  &__page {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  &__main__container {
+    padding-bottom: 10vh;
+  }
+  &__image__container {
+    width: 100vw;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    height: fit-content;
+    & img {
+      width: 20rem;
+    }
+  }
+}
+.Typewriter {
+  font-size: 8vw;
+  margin-top: 5rem;
+  &__cursor {
+    color: var(--action-color);
+  }
+  &__kill-animation {
+    animation: none !important;
+  }
+}
+@media (min-width: 1000px) {
+  .landing {
+    &__image__container {
+      & img {
+        width: 20vh;
+      }
+    }
+  }
+}

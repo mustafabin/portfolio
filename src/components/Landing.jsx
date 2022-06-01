@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Landing.css";
+import "../styles/Landing.scss";
+import src from "../media/normal.png";
+import Typewriter from "typewriter-effect";
 export default function Landing() {
   const [screenWidth, setScreenWidth] = useState(0);
   let handleRezise = () => {
     setScreenWidth(window.innerWidth);
   };
   useEffect(() => {
+    handleRezise();
     window.addEventListener("resize", handleRezise);
 
     return () => {
@@ -13,8 +16,26 @@ export default function Landing() {
     };
   }, []);
   return (
-    <div className="landing-main-container">
-      <p>{screenWidth}</p>
+    <div className="landing__main__container">
+      <div className="landing__page">
+        <div className="landing__typewriter">
+          <Typewriter
+            options={{
+              autoStart: true,
+            }}
+            onInit={(typewriter) => {
+              typewriter
+                .typeString(screenWidth.toString())
+                .pauseFor(2500)
+                .typeString("Mustafa")
+                .start();
+            }}
+          />
+        </div>
+        <div className="landing__image__container">
+          <img src={src} alt="Mustafa's sprite" />
+        </div>
+      </div>
     </div>
   );
 }
