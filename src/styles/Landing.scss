@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap");
 .landing {
   &__page {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -12,18 +13,38 @@
   }
   &__image__container {
     width: 100vw;
-    align-self: flex-end;
     display: flex;
     justify-content: flex-end;
     height: fit-content;
+
     & img {
-      width: 20rem;
+      width: 250px;
     }
   }
+  &__typewriter {
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 5vh;
+    margin-top: 5rem;
+  }
+}
+strong {
+  color: red;
+  padding-left: 1.5rem;
+}
+.typewriter-container {
+  // border: 1px solid red;
+
+  padding: 2rem;
 }
 .Typewriter {
-  font-size: 8vw;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
   margin-top: 5rem;
+  font-size: 2.3rem;
+  &__wrapper {
+    padding-left: 1.5rem;
+  }
   &__cursor {
     color: var(--action-color);
   }
@@ -32,11 +53,17 @@
   }
 }
 @media (min-width: 1000px) {
-  .landing {
-    &__image__container {
-      & img {
-        width: 20vh;
-      }
-    }
+  .Typewriter {
+    font-size: 3.3vw;
   }
+}
+@media (max-width: 580px) {
+  .Typewriter {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 580px) {
+  // .Typewriter {
+  //   font-size: 2rem;
+  // }
 }
