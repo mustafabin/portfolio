@@ -9,9 +9,10 @@ export default function Nav() {
   const [navClass, setNavClass] = useState("");
   let lastScrollY = window.scrollY;
   window.addEventListener("scroll", () => {
-    if (lastScrollY < window.scrollY) {
+    //the number in this expression is for how sensitive the navigation animation is
+    if (window.scrollY - lastScrollY > 5) {
       setNavClass("nav--hidden");
-    } else {
+    } else if (window.scrollY - lastScrollY < -5) {
       setNavClass("");
     }
     lastScrollY = window.scrollY;
