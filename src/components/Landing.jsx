@@ -16,7 +16,7 @@ export default function Landing() {
     };
   }, []);
   return (
-    <div className="landing__main__container">
+    <div className="landing__main__container" id="Landing">
       <div className="landing__page">
         <div className="landing__typewriter">
           <div className="typewriter-container">
@@ -52,6 +52,7 @@ export default function Landing() {
                   .start();
               }}
             />
+            <h1>{screenWidth}</h1>
           </div>
         </div>
         <div className="landing__image__container">

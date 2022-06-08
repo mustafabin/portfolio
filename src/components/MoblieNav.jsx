@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import WhiteBrandVideo from "../media/white-brand.gif";
 import DarkBrandVideo from "../media/dark-brand.gif";
 import { useSelector, useDispatch } from "react-redux";
@@ -11,19 +11,19 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import { toggleValue } from "../redux/mode.js";
 import { MaterialUISwitch } from "./DefaultNav.jsx";
 import "../styles/MoblieNav.scss";
+
 export default function MoblieNav() {
   const dispatch = useDispatch();
   const mode = useSelector((state) => state.mode.value);
   const nav = useRef(null);
-  const navItems = useRef(null);
-  let handleSwitch = () => {
-    dispatch(toggleValue());
+  let handleClick = () => {
     nav.current.classList.toggle("moblie-nav-open");
     setTimeout(() => {
+      let typewriter = document.body.querySelector(".Typewriter__cursor");
+      if (typewriter) typewriter.classList.add("Typewriter__kill-animation");
       document.body
-        .querySelector(".Typewriter__cursor")
-        .classList.toggle("Typewriter__kill-animation");
-      navItems.current.classList.toggle("show-moblie-nav-items");
+        .querySelector(".moblie-nav-links")
+        .classList.toggle("show-moblie-nav-items");
     }, 450);
   };
   return (
@@ -42,15 +42,7 @@ export default function MoblieNav() {
           width="50"
           height="50"
           viewBox="0 0 50 50"
-          onClick={() => {
-            nav.current.classList.toggle("moblie-nav-open");
-            setTimeout(() => {
-              document.body
-                .querySelector(".Typewriter__cursor")
-                .classList.toggle("Typewriter__kill-animation");
-              navItems.current.classList.toggle("show-moblie-nav-items");
-            }, 450);
-          }}
+          onClick={handleClick}
         >
           <title>Toggle Menu</title>
           <g>
@@ -88,31 +80,35 @@ export default function MoblieNav() {
       </div>
       <div className="splash"></div>
       <div className="moblie-nav-links-container">
-        <div ref={navItems} className="moblie-nav-links">
-          <HashLink to="/">
+        <div className="moblie-nav-links">
+          <HashLink onClick={handleClick} smooth to="/#Landing">
             <HomeIcon fontSize="large"></HomeIcon>
             <p>Home</p>
           </HashLink>
-          <HashLink to="/">
+          <HashLink onClick={handleClick} smooth to="/#About">
             <AccountCircleIcon fontSize="large"></AccountCircleIcon>
             <p>About</p>
           </HashLink>
-          <HashLink to="/">
+          <HashLink onClick={handleClick} smooth to="/#Projects">
             <FolderIcon fontSize="large"></FolderIcon>
             <p>Projects</p>
           </HashLink>
-          <HashLink to="/resume">
+          <HashLink onClick={handleClick} smooth to="/resume/#Resume">
             <ArticleIcon fontSize="large"></ArticleIcon>
             <p>Resume</p>
           </HashLink>
           <div className="moblie-nav-switch">
             <FormControlLabel
-              onChange={handleSwitch}
+              onChange={() => {
+                dispatch(toggleValue());
+                handleClick();
+              }}
               control={
                 <MaterialUISwitch
                   onKeyDown={(e) => {
                     if (e.key === "Enter") {
-                      handleSwitch();
+                      dispatch(toggleValue());
+                      handleClick();
                     }
                   }}
                   sx={{ m: 1 }}

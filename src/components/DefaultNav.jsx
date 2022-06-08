@@ -72,22 +72,19 @@ export default function DefaultNav() {
         ></img>
       </div>
       <div className="nav-link-container">
-        <HashLink to="/">
+        <HashLink smooth to="/#Landing">
           <HomeIcon fontSize="large"></HomeIcon>
           Home
         </HashLink>
-        <HashLink to="/">
+        <HashLink smooth to="/#About">
           <AccountCircleIcon fontSize="large"></AccountCircleIcon>
           About
         </HashLink>
-        <HashLink to="/">
+        <HashLink smooth to="/#Projects">
           <FolderIcon fontSize="large"></FolderIcon>
           Projects
         </HashLink>
-        <HashLink
-          to="/
-resume"
-        >
+        <HashLink smooth to="/resume/#Resume">
           <ArticleIcon fontSize="large"></ArticleIcon>
           Resume
         </HashLink>

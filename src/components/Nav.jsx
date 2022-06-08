@@ -15,6 +15,7 @@ export default function Nav() {
     } else if (window.scrollY - lastScrollY < -5) {
       setNavClass("");
     }
+    // if user is at the top of the page show nav regardless
     if (window.scrollY === 0) setNavClass("");
     lastScrollY = window.scrollY;
   });

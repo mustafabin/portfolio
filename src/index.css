@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap");
+* {
+  font-family: "IBM Plex Mono", monospace;
+}
 :root {
   --main-color: #2a2f40;
   --dark-main-color: #212831;
@@ -14,7 +18,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
