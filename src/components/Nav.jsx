@@ -15,6 +15,7 @@ export default function Nav() {
     } else if (window.scrollY - lastScrollY < -5) {
       setNavClass("");
     }
+    if (window.scrollY === 0) setNavClass("");
     lastScrollY = window.scrollY;
   });
 
