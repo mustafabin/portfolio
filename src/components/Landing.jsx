@@ -1,17 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useSelector } from "react-redux";
 import "../styles/Landing.scss";
-import src from "../media/normal.png";
 import Typewriter from "typewriter-effect";
+import normalSprite from "../media/normal.png";
+import upSprite from "../media/up.png";
 export default function Landing() {
+  const sprite = useRef(null);
   const [screenWidth, setScreenWidth] = useState(0);
+  const src = useSelector((state) => state.sprite.value);
   let handleRezise = () => {
     setScreenWidth(window.innerWidth);
+  };
+  let handleSpriteScroll = () => {
+    window.scrollY > 880
+      ? (sprite.current.style.top = "150")
+      : (sprite.current.style.top = "100");
   };
   useEffect(() => {
     handleRezise();
     window.addEventListener("resize", handleRezise);
 
+    window.addEventListener("scroll", handleSpriteScroll);
     return () => {
+      window.removeEventListener("scroll", handleSpriteScroll);
       window.removeEventListener("resize", handleRezise);
     };
   }, []);
@@ -55,8 +66,11 @@ export default function Landing() {
             <h1>{screenWidth}</h1>
           </div>
         </div>
-        <div className="landing__image__container">
-          <img src={src} alt="Mustafa's sprite" />
+        <div ref={sprite} className="landing__image__container">
+          <img
+            src={src === "normal" ? normalSprite : upSprite}
+            alt="Mustafa's sprite"
+          />
         </div>
       </div>
     </div>

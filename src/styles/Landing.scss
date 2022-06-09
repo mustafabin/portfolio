@@ -11,13 +11,13 @@
     padding-bottom: 10vh;
   }
   &__image__container {
-    width: 100vw;
-    display: flex;
-    justify-content: flex-end;
-    height: fit-content;
-
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    transition: all ease 0.15s;
     & img {
       width: 250px;
+      height: 250px;
     }
   }
   &__typewriter {
@@ -48,6 +48,17 @@ strong {
   }
   &__kill-animation {
     animation: none !important;
+  }
+}
+@media (min-width: 1500px) {
+  .landing {
+    &__image__container {
+      // height: fit-content;
+      border: 1px solid red;
+      & img {
+        // width: 500px;
+      }
+    }
   }
 }
 @media (min-width: 1000px) {

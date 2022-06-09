@@ -18,9 +18,15 @@ export default function MoblieNav() {
   const nav = useRef(null);
   let handleClick = () => {
     nav.current.classList.toggle("moblie-nav-open");
+
+    let typewriter = document.body.querySelector(".Typewriter__cursor");
+    if (typewriter) typewriter.classList.add("Typewriter__kill-animation");
+    let sprite = document.body.querySelector(".landing__image__container");
+    if (sprite) sprite.classList.toggle("hide-items");
     setTimeout(() => {
-      let typewriter = document.body.querySelector(".Typewriter__cursor");
-      if (typewriter) typewriter.classList.add("Typewriter__kill-animation");
+      document.body
+        .querySelector(".moblie-nav-links-container")
+        .classList.toggle("show-moblie-nav-links-container");
       document.body
         .querySelector(".moblie-nav-links")
         .classList.toggle("show-moblie-nav-items");
@@ -42,7 +48,9 @@ export default function MoblieNav() {
           width="50"
           height="50"
           viewBox="0 0 50 50"
-          onClick={handleClick}
+          onClick={() => {
+            handleClick();
+          }}
         >
           <title>Toggle Menu</title>
           <g>
@@ -81,19 +89,19 @@ export default function MoblieNav() {
       <div className="splash"></div>
       <div className="moblie-nav-links-container">
         <div className="moblie-nav-links">
-          <HashLink onClick={handleClick} smooth to="/#Landing">
+          <HashLink onClick={() => handleClick()} smooth to="/#Landing">
             <HomeIcon fontSize="large"></HomeIcon>
             <p>Home</p>
           </HashLink>
-          <HashLink onClick={handleClick} smooth to="/#About">
+          <HashLink onClick={() => handleClick()} smooth to="/#About">
             <AccountCircleIcon fontSize="large"></AccountCircleIcon>
             <p>About</p>
           </HashLink>
-          <HashLink onClick={handleClick} smooth to="/#Projects">
+          <HashLink onClick={() => handleClick()} smooth to="/#Projects">
             <FolderIcon fontSize="large"></FolderIcon>
             <p>Projects</p>
           </HashLink>
-          <HashLink onClick={handleClick} smooth to="/resume/#Resume">
+          <HashLink onClick={() => handleClick()} smooth to="/resume/#Resume">
             <ArticleIcon fontSize="large"></ArticleIcon>
             <p>Resume</p>
           </HashLink>
@@ -123,6 +131,3 @@ export default function MoblieNav() {
     </div>
   );
 }
-// opacity: 0;
-// display: none;
-// ..moblie-nav-links {
