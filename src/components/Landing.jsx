@@ -12,9 +12,9 @@ export default function Landing() {
     setScreenWidth(window.innerWidth);
   };
   let handleSpriteScroll = () => {
-    window.scrollY > 880
-      ? (sprite.current.style.top = "150")
-      : (sprite.current.style.top = "100");
+    window.scrollY > 900
+      ? sprite.current.classList.toggle("move-sprite", true)
+      : sprite.current.classList.toggle("move-sprite", false);
   };
   useEffect(() => {
     handleRezise();
@@ -43,7 +43,7 @@ export default function Landing() {
                   .deleteAll()
                   .pauseFor(200)
                   .typeString(
-                    "My name is <span style='color: var(--action-color);  font-weight: 400;'> Mustafa <span> <br></br>"
+                    "Im <span style='color: var(--action-color);  font-weight: 400;'> Mustafa Binalhag<span> <br></br>"
                   )
                   .typeString("<strong></strong>A Full Stack engeneer")
                   .changeDeleteSpeed(30)

@@ -2,8 +2,7 @@
   &__page {
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+
     height: 100vh;
     width: 100vw;
   }
@@ -14,7 +13,8 @@
     bottom: 0;
     right: 0;
     position: fixed;
-    transition: all ease 0.15s;
+    transition: opacity ease 0.15s;
+    transition: transform ease 0.5s;
     & img {
       width: 250px;
       height: 250px;
@@ -28,7 +28,6 @@
   }
 }
 strong {
-  color: red;
   padding-left: 1.5rem;
 }
 .typewriter-container {
@@ -50,29 +49,29 @@ strong {
     animation: none !important;
   }
 }
-@media (min-width: 1500px) {
-  .landing {
-    &__image__container {
-      // height: fit-content;
-      border: 1px solid red;
-      & img {
-        // width: 500px;
-      }
-    }
+.move-sprite {
+  transform: translateX(100%);
+}
+@media (max-width: 640px) {
+  .Typewriter {
+    font-size: 5.5vw;
   }
 }
 @media (min-width: 1000px) {
   .Typewriter {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1500px) {
+  .Typewriter {
     font-size: 3.3vw;
   }
-}
-@media (max-width: 580px) {
-  .Typewriter {
-    font-size: 1.5rem;
+  .landing {
+    &__image__container {
+      & img {
+        width: 20vw;
+        height: 20vw;
+      }
+    }
   }
-}
-@media (min-width: 580px) {
-  // .Typewriter {
-  //   font-size: 2rem;
-  // }
 }
