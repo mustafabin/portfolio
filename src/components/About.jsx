@@ -7,7 +7,7 @@ import reactIcon from "../media/react.svg";
 import reduxIcon from "../media/redux.svg";
 import nodeIcon from "../media/node.svg";
 import mongoDBIcon from "../media/mongoDB.svg";
-import gitIcon from "../media/git.svg";
+import typeIcon from "../media/type.svg";
 import expressIcon from "../media/express.svg";
 import pythonIcon from "../media/python.svg";
 import djangoIcon from "../media/django.svg";
@@ -80,6 +80,7 @@ export default function About() {
                 <p className="About__skills__header">My Stacks 📚</p>
                 <div className="About__image_array">
                   <img src={postgresIcon} alt="devIcon" title="PostgreSQL" />
+                  <img src={typeIcon} alt="devIcon" title="Typescript" />
                   <img src={djangoIcon} alt="devIcon" title="Django" />
                   <img src={pythonIcon} alt="devIcon" title="Python" />
                   <img src={jwtIcon} alt="devIcon" title="Json Web Tokens" />
@@ -91,7 +92,6 @@ export default function About() {
                   <img src={flaskIcon} alt="devIcon" title="Flask" />
                   <img src={expressIcon} alt="devIcon" title="Express" />
                   <img src={herokuIcon} alt="devIcon" title="Heroku" />
-                  <img src={gitIcon} alt="devIcon" title="Git" />
                   <img src={cssIcon} alt="devIcon" title="css3" />
                   <img src={htmlIcon} alt="devIcon" title="HTML5" />
                 </div>

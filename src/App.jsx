@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Nav.jsx";
 import Landing from "./components/Landing.jsx";
 import About from "./components/About.jsx";
-import Projects from "./components/Projects.jsx";
+import Projects from "./components/Projects.tsx";
 import Footer from "./components/Footer.jsx";
 import Resume from "./components/Resume.jsx";
 function App() {
