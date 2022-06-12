@@ -12,7 +12,7 @@ export default function Landing() {
     setScreenWidth(window.innerWidth);
   };
   let handleSpriteScroll = () => {
-    window.scrollY > 900
+    window.scrollY > 1600
       ? sprite.current.classList.toggle("move-sprite", true)
       : sprite.current.classList.toggle("move-sprite", false);
   };

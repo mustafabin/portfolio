@@ -3,12 +3,22 @@
 // }
 .About {
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
   background-color: var(--main-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   &__content__container {
+    // border: 1px solid red;
+  }
+  &__skills__header {
+    align-self: center;
+    background: linear-gradient(
+      180deg,
+      transparent 90%,
+      var(--sub-action-color) 90%
+    );
+    font-size: 2rem;
   }
   &__animated__div {
     display: flex;
@@ -16,11 +26,13 @@
     align-items: center;
   }
   &__image__container {
+    margin: 3rem;
     border: 1.5px solid var(--action-color);
     width: 45vw;
     height: 45vw;
     max-width: 350px;
     max-height: 350px;
+    min-height: 100px;
     border-radius: 100%;
     overflow: hidden;
     display: flex;
@@ -31,6 +43,21 @@
     & img {
       flex-shrink: 0;
       width: 133%;
+    }
+  }
+  &__image_array {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    max-width: 50rem;
+    height: fit-content;
+    & img {
+      width: 10vw;
+      min-width: 4rem;
+      max-width: 7rem;
+      padding: 1rem;
     }
   }
   & h1 {
@@ -49,7 +76,7 @@
       transparent 95%,
       var(--action-color) 95%
     );
-    margin: 0px;
+    // margin: 0px;
   }
   & li {
     color: var(--sub-action-color);
@@ -67,5 +94,6 @@
     max-width: 50rem;
     text-align: center;
     font-size: 1.2rem;
+    // margin: 1rem;
   }
 }
