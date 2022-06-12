@@ -13,7 +13,13 @@ export default function Projects() {
 
   return (
     <div className="Project" id="Projects">
-      <div style={{ width: "100%", height: "100%", background: "#253237" }}>
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          background: "#2a2f40",
+        }}
+      >
         <Parallax ref={parallax} pages={3}>
           <ParallaxLayer
             offset={1}
@@ -31,7 +37,9 @@ export default function Projects() {
             speed={0}
             factor={3}
             style={{
-              backgroundImage: url("stars", true),
+              backgroundImage: url(
+                "https://awv3node-homepage.surge.sh/build/assets/${name}.svg"
+              ),
               backgroundSize: "cover",
             }}
           />

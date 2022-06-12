@@ -18,7 +18,7 @@ function App() {
             <>
               <Landing></Landing>
               <About></About>
-              <Projects></Projects>
+              {/* <Projects></Projects> */}
             </>
           }
         ></Route>
