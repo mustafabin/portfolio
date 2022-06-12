@@ -1,4 +1,5 @@
 import "./styles/App.scss";
+import "./styles/BreakPoints.scss";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Nav.jsx";
 import Landing from "./components/Landing.jsx";

@@ -52,26 +52,3 @@ strong {
 .move-sprite {
   transform: translateX(100%);
 }
-@media (max-width: 640px) {
-  .Typewriter {
-    font-size: 5.5vw;
-  }
-}
-@media (min-width: 1000px) {
-  .Typewriter {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 1500px) {
-  .Typewriter {
-    font-size: 3.3vw;
-  }
-  .landing {
-    &__image__container {
-      & img {
-        width: 20vw;
-        height: 20vw;
-      }
-    }
-  }
-}
