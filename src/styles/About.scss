@@ -1,0 +1,34 @@
+.About {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__image__container {
+    border: 1.5px solid var(--action-color);
+    width: 45vw;
+    height: 45vw;
+    max-width: 350px;
+    max-height: 350px;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.25s;
+
+    & img {
+      flex-shrink: 0;
+      width: 133%;
+    }
+  }
+  & h1 {
+    width: fit-content;
+    background: linear-gradient(
+      180deg,
+      transparent 70%,
+      var(--action-color) 70%
+    );
+  }
+}

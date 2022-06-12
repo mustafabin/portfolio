@@ -20,7 +20,11 @@ export default function Nav() {
       dispatch(setValue("normal"));
     }
     // if user is at the top of the page show nav regardless
-    if (window.scrollY === 0) setNavClass("");
+    if (window.scrollY === 0) {
+      setNavClass("");
+      dispatch(setValue("normal"));
+    }
+
     lastScrollY = window.scrollY;
   });
 

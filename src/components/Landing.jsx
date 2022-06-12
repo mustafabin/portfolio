@@ -60,6 +60,7 @@ export default function Landing() {
                   )
                   .changeDeleteSpeed("natural")
                   .pauseFor(2000)
+                  .deleteChars(7)
                   .start();
               }}
             />
