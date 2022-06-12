@@ -1,15 +1,19 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import "../styles/About.scss";
 import ProfilePic from "../media/profile.jpg";
 import { TrackRef } from "../util/viewTracker.js";
+import { useDispatch } from "react-redux";
+import { toggleValue } from "../redux/mode.js";
+
 export default function About() {
+  const dispatch = useDispatch();
   const ref = useRef(null);
-  const inViewport = TrackRef(ref, "0px");
-
-  if (inViewport) {
-    console.log("in viewport:", ref.current);
-  }
-
+  const inViewport = TrackRef(ref, "-100px"); //the 0px is the offset to when the effect should take place
+  useEffect(() => {
+    if (inViewport) {
+      dispatch(toggleValue());
+    }
+  }, [inViewport]);
   return (
     <>
       <div className="About" id="About">
