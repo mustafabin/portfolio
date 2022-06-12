@@ -22,7 +22,7 @@ import htmlIcon from "../media/html.svg";
 export default function About() {
   const aboutRef = useRef(null);
   const isAboutVisible = TrackRef(aboutRef, "0px"); //the 0px is the offset to when the effect should take place
-  const isSkillsVisible = TrackRef(aboutRef, "-250px"); //the 0px is the offset to when the effect should take place
+
   const firstTransistion = useTransition(isAboutVisible, {
     from: { x: 0, y: -200, opacity: 0 },
     enter: (item) => async (next) => {
@@ -30,13 +30,13 @@ export default function About() {
     },
     config: { mass: 2, tension: 200, friction: 15 },
   });
-  const secondTransistion = useTransition(isSkillsVisible, {
+  const secondTransistion = useTransition(isAboutVisible, {
     from: { x: 0, y: -200, opacity: 0 },
     enter: (item) => async (next) => {
       await next({ y: 0, opacity: 1 });
     },
     config: { mass: 2, tension: 200, friction: 20 },
-    delay: 1000,
+    delay: 1200,
   });
   return (
     <>
