@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import "../styles/About.scss";
 import ProfilePic from "../media/profile.jpg";
 import { TrackRef } from "../util/viewTracker.js";
@@ -28,7 +28,7 @@ export default function About() {
     enter: (item) => async (next) => {
       await next({ y: 0, opacity: 1 });
     },
-    config: { mass: 2, tension: 200, friction: 20 },
+    config: { mass: 2, tension: 200, friction: 15 },
   });
   const secondTransistion = useTransition(isSkillsVisible, {
     from: { x: 0, y: -200, opacity: 0 },
