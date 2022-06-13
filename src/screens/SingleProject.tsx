@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
-import "../styles/Projects.scss";
+
 const url = (name: string, wrap = false) =>
   `${
     wrap ? "url(" : ""

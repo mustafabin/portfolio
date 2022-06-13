@@ -4,9 +4,9 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Nav.jsx";
 import Landing from "./components/Landing.jsx";
 import About from "./components/About.jsx";
-import Projects from "./components/Projects.tsx";
+import Projects from "./components/Projects.jsx";
 import Footer from "./components/Footer.jsx";
-import Resume from "./components/Resume.jsx";
+import Resume from "./screens/Resume.jsx";
 function App() {
   return (
     <>
@@ -18,7 +18,7 @@ function App() {
             <>
               <Landing></Landing>
               <About></About>
-              {/* <Projects></Projects> */}
+              <Projects></Projects>
             </>
           }
         ></Route>
