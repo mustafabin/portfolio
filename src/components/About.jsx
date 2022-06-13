@@ -55,20 +55,6 @@ export default function About() {
                   datastructures such as MongoDB to build robust RESTful APIs or
                   with front end frameworks like React.js.
                 </p>
-                <h2 className="About__fun_facts">Fun Facts 👀 </h2>
-                <ul>
-                  <li>
-                    <p className="list-text ">
-                      Always down to hit a chest day<span>🏋🏽</span>
-                    </p>
-                  </li>
-                  <li>
-                    <p className="list-text ">
-                      I play Elden Ring, Valorant & Apex
-                      <span>🎮</span>
-                    </p>
-                  </li>
-                </ul>
               </animated.div>
             ) : (
               ""
