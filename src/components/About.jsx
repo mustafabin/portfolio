@@ -53,7 +53,7 @@ export default function About() {
                   I am a Full Stack Developer based in Queens NYC, experienced
                   in using SQL databases via PostgreSQL and non-relational
                   datastructures such as MongoDB to build robust RESTful APIs or
-                  with a front end frameworks like React.js.
+                  with front end frameworks like React.js.
                 </p>
                 <h2 className="About__fun_facts">Fun Facts 👀 </h2>
                 <ul>
