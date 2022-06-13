@@ -13,7 +13,6 @@
   }
 }
 .virtual-card {
-  min-width: 25rem;
   min-height: 30rem;
   width: 25rem;
   height: 30rem;
@@ -24,6 +23,7 @@
   border: 2.5px solid var(--action-color);
   transition: border-radius ease 0.5s, border-color ease-out 1.3s,
     box-shadow 0.5s;
+  margin: 2rem;
   &:hover {
     border-color: var(--sub-action-color);
     border-radius: 70px;
