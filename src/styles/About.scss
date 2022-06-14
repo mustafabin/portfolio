@@ -58,12 +58,14 @@
     display: flex;
     width: fit-content;
     font-size: 5rem;
+    align-items: center;
+    justify-content: center;
     & .contact_item {
       color: rgb(228, 185, 106);
       padding: 5vw;
       transition: all ease 0.3s;
       &:hover {
-        cursor: pointer;
+        font-size: 6vw;
         color: rgba(166, 33, 223, 0.573);
       }
     }
