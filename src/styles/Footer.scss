@@ -2,9 +2,16 @@
   height: 10vh;
   background-color: var(--footer-color);
   color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 0.7rem;
+  width: 100vw;
   &__contact_container {
+    font-size: 1.5rem;
     & a {
       text-decoration: none;
+      margin-left: 3vw;
       color: var(--text-color);
       &:hover {
         color: var(--action-color);

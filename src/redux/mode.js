@@ -30,7 +30,7 @@ export const modeSlice = createSlice({
         state.value = "Light";
         document.body.style.setProperty("--main-color", "#ffffff");
         document.body.style.setProperty("--dark-main-color", "#ffffff");
-        document.body.style.setProperty("--footer-color", "#212831");
+        document.body.style.setProperty("--footer-color", "#e5e4cb");
         document.body.style.setProperty("--splash-color", "#ede7f4");
         document.body.style.setProperty(
           "--fade-action-color",
