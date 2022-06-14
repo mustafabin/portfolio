@@ -11,6 +11,7 @@ import { toggleValue } from "../redux/mode.js";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -60,12 +61,14 @@ export const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 export default function DefaultNav() {
+  let navigate = useNavigate();
   const dispatch = useDispatch();
   const mode = useSelector((state) => state.mode.value);
   return (
     <>
       <div className="nav-brand-container">
         <img
+          onClick={() => navigate("/")}
           src={mode === "Light" ? WhiteBrandVideo : DarkBrandVideo}
           alt="brand"
           className="nav-brand-video"

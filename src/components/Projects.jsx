@@ -6,7 +6,9 @@ import NineDImage from "../media/9d.png";
 import countryImage from "../media/country.png";
 import "../styles/Projects.scss";
 import ReadMoreIcon from "@mui/icons-material/ReadMore";
+import { useNavigate } from "react-router-dom";
 export default function Projects() {
+  let navigate = useNavigate();
   const [xStiffness, setxStiffness] = useState(15);
   const [buttonText, setButtonText] = useState("Exaggerate Animation 🥵");
   //helper functions for the animation
@@ -77,7 +79,9 @@ export default function Projects() {
           <h3>Social media app</h3>
           <img src={haterImage} alt="Hater" />
           <button
-            onClick={() => {}}
+            onClick={() => {
+              navigate("/project/1");
+            }}
             className="virtual-card__button"
             variant="outlined"
           >
@@ -108,7 +112,9 @@ export default function Projects() {
           <h3>E-Commerce site</h3>
           <img src={cosmosImage} alt="Cosmos" />
           <button
-            onClick={() => {}}
+            onClick={() => {
+              navigate("/project/2");
+            }}
             className="virtual-card__button"
             variant="outlined"
           >
@@ -139,7 +145,9 @@ export default function Projects() {
           <h3>Board Game</h3>
           <img src={NineDImage} alt="9-D board game" />
           <button
-            onClick={() => {}}
+            onClick={() => {
+              navigate("/project/3");
+            }}
             className="virtual-card__button"
             variant="outlined"
           >
@@ -170,7 +178,9 @@ export default function Projects() {
           <h3>JSON API</h3>
           <img src={countryImage} alt="Street API" />
           <button
-            onClick={() => {}}
+            onClick={() => {
+              navigate("/project/4");
+            }}
             className="virtual-card__button"
             variant="outlined"
           >

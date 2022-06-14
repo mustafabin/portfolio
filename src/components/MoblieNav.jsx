@@ -11,8 +11,10 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import { toggleValue } from "../redux/mode.js";
 import { MaterialUISwitch } from "./DefaultNav.jsx";
 import "../styles/MoblieNav.scss";
+import { useNavigate } from "react-router-dom";
 
 export default function MoblieNav() {
+  let navigate = useNavigate();
   const dispatch = useDispatch();
   const mode = useSelector((state) => state.mode.value);
   const nav = useRef(null);
@@ -36,6 +38,7 @@ export default function MoblieNav() {
     <div ref={nav} className="moblie-nav-container">
       <div className="moblie-nav-brand-container">
         <img
+          onClick={() => navigate("/")}
           src={mode === "Light" ? WhiteBrandVideo : DarkBrandVideo}
           className="nav-brand-video"
           alt="brand video"
