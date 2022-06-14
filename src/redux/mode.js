@@ -13,6 +13,7 @@ export const modeSlice = createSlice({
         state.value = "Dark";
         document.body.style.setProperty("--main-color", "#2a2f40");
         document.body.style.setProperty("--dark-main-color", "#212831");
+        document.body.style.setProperty("--footer-color", "#212831");
         document.body.style.setProperty("--splash-color", "#7a2605");
         document.body.style.setProperty(
           "--fade-action-color",
@@ -29,6 +30,7 @@ export const modeSlice = createSlice({
         state.value = "Light";
         document.body.style.setProperty("--main-color", "#ffffff");
         document.body.style.setProperty("--dark-main-color", "#ffffff");
+        document.body.style.setProperty("--footer-color", "#212831");
         document.body.style.setProperty("--splash-color", "#ede7f4");
         document.body.style.setProperty(
           "--fade-action-color",

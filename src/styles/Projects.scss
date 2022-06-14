@@ -33,7 +33,7 @@
   box-shadow: 0 1px 1px 0 var(--fade-action-color),
     0 1px 20px 2px var(--fade-action-color);
   will-change: transform;
-  border: 2.5px solid var(--action-color);
+  border: 1.6px solid var(--action-color);
   transition: border-radius ease 0.5s, border-color ease-out 1.3s, box-shadow 2s;
   margin: 2rem;
   display: flex;
@@ -43,7 +43,7 @@
     border-color: var(--sub-action-color);
     box-shadow: 0 1px 1px 0 var(--fade-sub-action-color),
       0 1px 50px 2px var(--fade-sub-action-color);
-    border-radius: 80px;
+    border-radius: 60px;
   }
   & img {
     max-width: 20rem;
@@ -53,7 +53,6 @@
   &__button {
     background-color: rgba(90, 90, 223, 0.243);
     color: var(--text-color);
-
     font-weight: bolder;
     font-size: 1.1rem;
     transition: all ease 0.5s;
@@ -62,14 +61,18 @@
     padding: 0.7rem;
     border-color: transparent;
     margin-bottom: 3rem;
-
+    display: flex;
+    align-items: center;
     &:hover {
       background-color: rgba(90, 223, 126, 0.243);
       font-weight: bolder;
-      border: 1px solid rgba(90, 223, 126, 0.5);
+      border: 1px solid rgba(90, 223, 126, 0.243);
     }
     & .learn-more-icon {
       font-size: 2rem;
     }
   }
+}
+.exaggerate-button {
+  margin: 2rem;
 }

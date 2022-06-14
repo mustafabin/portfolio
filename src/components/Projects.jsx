@@ -1,25 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import haterImage from "../media/hater.png";
 import cosmosImage from "../media/cosmos.png";
 import NineDImage from "../media/9d.png";
 import countryImage from "../media/country.png";
 import "../styles/Projects.scss";
-import Button from "@mui/material/Button";
 import ReadMoreIcon from "@mui/icons-material/ReadMore";
-//helper functions for the animation
-const calc = (x, y) => [
-  -(y - window.innerHeight / 2) / 30, // the denominator is repsonible for the 'stiffness'
-  (x - window.innerWidth / 2) / 15, //in this case since the button is at the button i dont want the animation to as annoying
-  1.07,
-];
-const trans = (x, y, s) =>
-  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
-const AnimationDefaults = {
-  xys: [0, 0, 1],
-  config: { mass: 15, tension: 200, friction: 50 },
-};
 export default function Projects() {
+  const [xStiffness, setxStiffness] = useState(15);
+  const [buttonText, setButtonText] = useState("Exaggerate Animation 🥵");
+  //helper functions for the animation
+  const calc = (x, y) => [
+    -(y - window.innerHeight / 2) / 35, // the denominator is repsonible for the 'stiffness'
+    (x - window.innerWidth / 2) / xStiffness, //in this case since the button is at the button i dont want the animation to as annoying
+    1.07,
+  ];
+  const trans = (x, y, s) =>
+    `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+  const AnimationDefaults = {
+    xys: [0, 0, 1],
+    config: { mass: 15, tension: 200, friction: 50 },
+  };
   const [styleOne, setstyleOne] = useSpring(() => ({
     xys: AnimationDefaults.xys,
     config: AnimationDefaults.config,
@@ -36,9 +37,25 @@ export default function Projects() {
     xys: AnimationDefaults.xys,
     config: AnimationDefaults.config,
   }));
+  let handleExaggeration = () => {
+    if (xStiffness !== 1) {
+      setxStiffness(1);
+      setButtonText("Return to Normal 😵‍💫");
+    } else {
+      setxStiffness(15);
+
+      setButtonText("Exaggerate Animation 🥵");
+    }
+  };
   return (
     <div className="Project" id="Projects">
-      <h1 className="Project__title">My Projects 🎨 </h1>
+      <h1 className="Project__title">My Projects 🎨</h1>
+      <button
+        className="virtual-card__button exaggerate-button"
+        onClick={handleExaggeration}
+      >
+        {buttonText}
+      </button>
       <div className="Project__virtual__container">
         <animated.div
           className="virtual-card"
@@ -48,10 +65,18 @@ export default function Projects() {
           onMouseLeave={() => setstyleOne.start({ xys: [0, 0, 1] })}
           style={{ transform: styleOne.xys.to(trans) }}
         >
-          <h1 className="virtual-card__title">Hater 🐥👺</h1>
+          <h1
+            className="virtual-card__title"
+            style={{
+              background:
+                "linear-gradient(180deg, transparent 70%,rgba(235, 66, 108, 0.5) 70%,rgba(235, 66, 108, 0.5) 87%,transparent 87%)",
+            }}
+          >
+            Hater 🐥👺
+          </h1>
           <h3>Social media app</h3>
           <img src={haterImage} alt="Hater" />
-          <Button
+          <button
             onClick={() => {}}
             className="virtual-card__button"
             variant="outlined"
@@ -61,7 +86,7 @@ export default function Projects() {
               className="learn-more-icon"
               fontSize="inherit"
             ></ReadMoreIcon>
-          </Button>
+          </button>
         </animated.div>
         <animated.div
           className="virtual-card"
@@ -71,10 +96,18 @@ export default function Projects() {
           onMouseLeave={() => setstyleTwo.start({ xys: [0, 0, 1] })}
           style={{ transform: styleTwo.xys.to(trans) }}
         >
-          <h1 className="virtual-card__title">Cosmos 🔭🌍</h1>
+          <h1
+            className="virtual-card__title"
+            style={{
+              background:
+                "linear-gradient(180deg, transparent 70%,rgba(142, 66, 235,0.5) 70%,rgba(142, 66, 235,0.5) 87%,transparent 87%)",
+            }}
+          >
+            Cosmos 🔭🌍
+          </h1>
           <h3>E-Commerce site</h3>
           <img src={cosmosImage} alt="Cosmos" />
-          <Button
+          <button
             onClick={() => {}}
             className="virtual-card__button"
             variant="outlined"
@@ -84,7 +117,7 @@ export default function Projects() {
               className="learn-more-icon"
               fontSize="inherit"
             ></ReadMoreIcon>
-          </Button>
+          </button>
         </animated.div>
         <animated.div
           className="virtual-card"
@@ -94,10 +127,18 @@ export default function Projects() {
           onMouseLeave={() => setstyleThree.start({ xys: [0, 0, 1] })}
           style={{ transform: styleThree.xys.to(trans) }}
         >
-          <h1 className="virtual-card__title">9-D ❌⭕</h1>
+          <h1
+            className="virtual-card__title"
+            style={{
+              background:
+                "linear-gradient(180deg, transparent 70%,rgba(66, 122, 235, 0.5) 70%,rgba(66, 122, 235, 0.5) 87%,transparent 87%)",
+            }}
+          >
+            9-D ❌⭕
+          </h1>
           <h3>Board Game</h3>
           <img src={NineDImage} alt="9-D board game" />
-          <Button
+          <button
             onClick={() => {}}
             className="virtual-card__button"
             variant="outlined"
@@ -107,7 +148,7 @@ export default function Projects() {
               className="learn-more-icon"
               fontSize="inherit"
             ></ReadMoreIcon>
-          </Button>
+          </button>
         </animated.div>
         <animated.div
           className="virtual-card"
@@ -117,10 +158,18 @@ export default function Projects() {
           onMouseLeave={() => setstyleFour.start({ xys: [0, 0, 1] })}
           style={{ transform: styleFour.xys.to(trans) }}
         >
-          <h1 className="virtual-card__title">Country API 🌐</h1>
+          <h1
+            className="virtual-card__title"
+            style={{
+              background:
+                "linear-gradient(180deg, transparent 70%,rgba(117, 235, 66, 0.5) 70%,rgba(117, 235, 66, 0.5) 87%,transparent 87%)",
+            }}
+          >
+            Country API 🌐
+          </h1>
           <h3>JSON API</h3>
           <img src={countryImage} alt="Street API" />
-          <Button
+          <button
             onClick={() => {}}
             className="virtual-card__button"
             variant="outlined"
@@ -130,7 +179,7 @@ export default function Projects() {
               className="learn-more-icon"
               fontSize="inherit"
             ></ReadMoreIcon>
-          </Button>
+          </button>
         </animated.div>
       </div>
     </div>
