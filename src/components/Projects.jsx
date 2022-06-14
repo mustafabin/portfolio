@@ -1,13 +1,17 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
 import haterImage from "../media/hater.png";
+import cosmosImage from "../media/cosmos.png";
+import NineDImage from "../media/9d.png";
+import countryImage from "../media/country.png";
 import "../styles/Projects.scss";
-
+import Button from "@mui/material/Button";
+import ReadMoreIcon from "@mui/icons-material/ReadMore";
 //helper functions for the animation
 const calc = (x, y) => [
-  -(y - window.innerHeight / 2) / 20,
-  (x - window.innerWidth / 2) / 20,
-  1.09,
+  -(y - window.innerHeight / 2) / 30, // the denominator is repsonible for the 'stiffness'
+  (x - window.innerWidth / 2) / 15, //in this case since the button is at the button i dont want the animation to as annoying
+  1.07,
 ];
 const trans = (x, y, s) =>
   `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
@@ -47,7 +51,17 @@ export default function Projects() {
           <h1 className="virtual-card__title">Hater 🐥👺</h1>
           <h3>Social media app</h3>
           <img src={haterImage} alt="Hater" />
-          <button>Learn More</button>
+          <Button
+            onClick={() => {}}
+            className="virtual-card__button"
+            variant="outlined"
+          >
+            Learn More
+            <ReadMoreIcon
+              className="learn-more-icon"
+              fontSize="inherit"
+            ></ReadMoreIcon>
+          </Button>
         </animated.div>
         <animated.div
           className="virtual-card"
@@ -59,8 +73,18 @@ export default function Projects() {
         >
           <h1 className="virtual-card__title">Cosmos 🔭🌍</h1>
           <h3>E-Commerce site</h3>
-          <img src={""} alt="Cosmos" />
-          <button>Learn More</button>
+          <img src={cosmosImage} alt="Cosmos" />
+          <Button
+            onClick={() => {}}
+            className="virtual-card__button"
+            variant="outlined"
+          >
+            Learn More
+            <ReadMoreIcon
+              className="learn-more-icon"
+              fontSize="inherit"
+            ></ReadMoreIcon>
+          </Button>
         </animated.div>
         <animated.div
           className="virtual-card"
@@ -72,8 +96,18 @@ export default function Projects() {
         >
           <h1 className="virtual-card__title">9-D ❌⭕</h1>
           <h3>Board Game</h3>
-          <img src={""} alt="9-D board game" />
-          <button>Learn More</button>
+          <img src={NineDImage} alt="9-D board game" />
+          <Button
+            onClick={() => {}}
+            className="virtual-card__button"
+            variant="outlined"
+          >
+            Learn More
+            <ReadMoreIcon
+              className="learn-more-icon"
+              fontSize="inherit"
+            ></ReadMoreIcon>
+          </Button>
         </animated.div>
         <animated.div
           className="virtual-card"
@@ -85,8 +119,18 @@ export default function Projects() {
         >
           <h1 className="virtual-card__title">Country API 🌐</h1>
           <h3>JSON API</h3>
-          <img src={""} alt="Street API" />
-          <button>Learn More</button>
+          <img src={countryImage} alt="Street API" />
+          <Button
+            onClick={() => {}}
+            className="virtual-card__button"
+            variant="outlined"
+          >
+            Learn More
+            <ReadMoreIcon
+              className="learn-more-icon"
+              fontSize="inherit"
+            ></ReadMoreIcon>
+          </Button>
         </animated.div>
       </div>
     </div>

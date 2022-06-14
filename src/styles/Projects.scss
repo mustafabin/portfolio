@@ -27,9 +27,8 @@
   }
 }
 .virtual-card {
-  min-height: 30rem;
   width: 25rem;
-  height: 30rem;
+  height: fit-content;
   border-radius: 40px;
   box-shadow: 0 1px 1px 0 var(--fade-action-color),
     0 1px 20px 2px var(--fade-action-color);
@@ -47,6 +46,30 @@
     border-radius: 80px;
   }
   & img {
-    max-width: 80%;
+    max-width: 20rem;
+    max-height: 20rem;
+    margin-bottom: 2rem;
+  }
+  &__button {
+    background-color: rgba(90, 90, 223, 0.243);
+    color: var(--text-color);
+
+    font-weight: bolder;
+    font-size: 1.1rem;
+    transition: all ease 0.5s;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    padding: 0.7rem;
+    border-color: transparent;
+    margin-bottom: 3rem;
+
+    &:hover {
+      background-color: rgba(90, 223, 126, 0.243);
+      font-weight: bolder;
+      border: 1px solid rgba(90, 223, 126, 0.5);
+    }
+    & .learn-more-icon {
+      font-size: 2rem;
+    }
   }
 }
