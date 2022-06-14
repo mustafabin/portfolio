@@ -8,11 +8,23 @@ export default function Footer() {
     <div className="Footer" id="Footer">
       Footer
       <div className="Footer__contact_container">
-        <a href="https://www.linkedin.com/in/mustafabinalhag/" target="_blank">
-          <LinkedInIcon fontSize="inherit" />
+        <a
+          href="https://www.linkedin.com/in/mustafabinalhag/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <LinkedInIcon className="contact_item" fontSize="inherit" />
         </a>
-        <GitHubIcon fontSize="inherit" />
-        <EmailIcon fontSize="inherit" />
+        <a
+          href="https://github.com/mustafabin"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <GitHubIcon className="contact_item" fontSize="inherit" />
+        </a>
+        <a href="mailto:mbin828@gmail.com">
+          <EmailIcon className="contact_item" fontSize="inherit" />
+        </a>
       </div>
     </div>
   );

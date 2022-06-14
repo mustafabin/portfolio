@@ -87,11 +87,16 @@ export default function About() {
                 <div className="About__contact_array">
                   <a
                     href="https://www.linkedin.com/in/mustafabinalhag/"
+                    rel="noreferrer"
                     target="_blank"
                   >
                     <LinkedInIcon className="contact_item" fontSize="inherit" />
                   </a>
-                  <a href="https://github.com/mustafabin" target="_blank">
+                  <a
+                    href="https://github.com/mustafabin"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
                     <GitHubIcon className="contact_item" fontSize="inherit" />
                   </a>
                   <a href="mailto:mbin828@gmail.com">

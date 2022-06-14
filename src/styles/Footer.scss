@@ -6,6 +6,9 @@
     & a {
       text-decoration: none;
       color: var(--text-color);
+      &:hover {
+        color: var(--action-color);
+      }
     }
   }
 }
