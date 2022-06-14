@@ -18,7 +18,9 @@ import herokuIcon from "../media/heroku.svg";
 import sassIcon from "../media/sass.svg";
 import cssIcon from "../media/css.svg";
 import htmlIcon from "../media/html.svg";
-
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import EmailIcon from "@mui/icons-material/Email";
 export default function About() {
   const aboutRef = useRef(null);
   const isAboutVisible = TrackRef(aboutRef, "0px"); //the 0px is the offset to when the effect should take place
@@ -80,6 +82,21 @@ export default function About() {
                   <img src={herokuIcon} alt="devIcon" title="Heroku" />
                   <img src={cssIcon} alt="devIcon" title="css3" />
                   <img src={htmlIcon} alt="devIcon" title="HTML5" />
+                </div>
+                <p className="About__contact-title">Contact</p>
+                <div className="About__contact_array">
+                  <a
+                    href="https://www.linkedin.com/in/mustafabinalhag/"
+                    target="_blank"
+                  >
+                    <LinkedInIcon className="contact_item" fontSize="inherit" />
+                  </a>
+                  <a href="https://github.com/mustafabin" target="_blank">
+                    <GitHubIcon className="contact_item" fontSize="inherit" />
+                  </a>
+                  <a href="mailto:mbin828@gmail.com">
+                    <EmailIcon className="contact_item" fontSize="inherit" />
+                  </a>
                 </div>
               </animated.div>
             ) : (

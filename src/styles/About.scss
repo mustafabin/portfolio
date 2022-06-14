@@ -12,8 +12,10 @@
     align-self: center;
     background: linear-gradient(
       180deg,
-      transparent 90%,
-      var(--sub-action-color) 90%
+      transparent 70%,
+      rgba(100, 184, 160, 0.56) 70%,
+      rgba(100, 184, 160, 0.56) 87%,
+      transparent 87%
     );
     font-size: 2rem;
   }
@@ -40,6 +42,30 @@
     & img {
       flex-shrink: 0;
       width: 133%;
+    }
+  }
+  &__contact-title {
+    font-size: 2rem;
+    font-weight: lighter;
+    background: linear-gradient(
+      180deg,
+      transparent 80%,
+      rgba(96, 8, 133, 1) 80%,
+      rgba(105, 5, 62, 1) 100%
+    );
+  }
+  &__contact_array {
+    display: flex;
+    width: fit-content;
+    font-size: 5rem;
+    & .contact_item {
+      color: rgb(228, 185, 106);
+      padding: 5vw;
+      transition: all ease 0.3s;
+      &:hover {
+        cursor: pointer;
+        color: rgba(166, 33, 223, 0.573);
+      }
     }
   }
   &__image_array {

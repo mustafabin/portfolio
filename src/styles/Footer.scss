@@ -2,4 +2,10 @@
   height: 10vh;
   background-color: var(--footer-color);
   color: var(--text-color);
+  &__contact_container {
+    & a {
+      text-decoration: none;
+      color: var(--text-color);
+    }
+  }
 }

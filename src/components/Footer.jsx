@@ -7,8 +7,10 @@ export default function Footer() {
   return (
     <div className="Footer" id="Footer">
       Footer
-      <div className="Footer_contact_container">
-        <LinkedInIcon fontSize="inherit" />
+      <div className="Footer__contact_container">
+        <a href="https://www.linkedin.com/in/mustafabinalhag/" target="_blank">
+          <LinkedInIcon fontSize="inherit" />
+        </a>
         <GitHubIcon fontSize="inherit" />
         <EmailIcon fontSize="inherit" />
       </div>
