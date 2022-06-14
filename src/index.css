@@ -27,6 +27,9 @@ body {
   height: 100vh;
   background-color: var(--main-color);
   color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

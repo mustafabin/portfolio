@@ -62,10 +62,11 @@
     justify-content: center;
     & .contact_item {
       color: rgb(228, 185, 106);
-      padding: 5vw;
+      margin: 5vw;
       transition: all ease 0.3s;
+
       &:hover {
-        font-size: 6vw;
+        font-size: smaller;
         color: rgba(166, 33, 223, 0.573);
       }
     }
