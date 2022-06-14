@@ -46,4 +46,7 @@
       0 1px 50px 2px var(--fade-sub-action-color);
     border-radius: 80px;
   }
+  & img {
+    max-width: 80%;
+  }
 }

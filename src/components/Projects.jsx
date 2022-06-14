@@ -1,6 +1,6 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
-
+import haterImage from "../media/hater.png";
 import "../styles/Projects.scss";
 
 //helper functions for the animation
@@ -46,7 +46,7 @@ export default function Projects() {
         >
           <h1 className="virtual-card__title">Hater 🐥👺</h1>
           <h3>Social media app</h3>
-          <img src={""} alt="Hater" />
+          <img src={haterImage} alt="Hater" />
           <button>Learn More</button>
         </animated.div>
         <animated.div
@@ -83,7 +83,7 @@ export default function Projects() {
           onMouseLeave={() => setstyleFour.start({ xys: [0, 0, 1] })}
           style={{ transform: styleFour.xys.to(trans) }}
         >
-          <h1 className="virtual-card__title">Street Globe 🌐</h1>
+          <h1 className="virtual-card__title">Country API 🌐</h1>
           <h3>JSON API</h3>
           <img src={""} alt="Street API" />
           <button>Learn More</button>
