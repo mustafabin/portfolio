@@ -49,9 +49,11 @@
     font-weight: lighter;
     background: linear-gradient(
       180deg,
-      transparent 80%,
-      rgba(96, 8, 133, 1) 80%,
-      rgba(105, 5, 62, 1) 100%
+      transparent 75%,
+      rgba(89, 17, 255, 0.3) 75%,
+      rgba(89, 50, 200, 0.4) 90%,
+      rgba(89, 17, 255, 0.3) 100%,
+      transparent 100%
     );
   }
   &__contact_array {
