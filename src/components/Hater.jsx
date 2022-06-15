@@ -50,7 +50,6 @@ export default function Hater() {
             <button>Demo Video 🎥</button>
           </a>
         </div>
-        w
       </div>
       <div className="SingleProject__bottom_container">
         <h1>Tech Used 🖥</h1>
