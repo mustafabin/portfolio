@@ -45,11 +45,12 @@ export default function Hater() {
           <a
             rel="noreferrer"
             target="_blank"
-            href="https://www.youtube.com/channel/UCxlFAjpYAZiwcxFte-Y7NUw"
+            href="https://youtu.be/z0OpjtlX9io"
           >
             <button>Demo Video 🎥</button>
           </a>
         </div>
+        w
       </div>
       <div className="SingleProject__bottom_container">
         <h1>Tech Used 🖥</h1>

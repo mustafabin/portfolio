@@ -46,7 +46,7 @@ export default function Cosmos() {
           <a
             rel="noreferrer"
             target="_blank"
-            href="https://www.youtube.com/channel/UCxlFAjpYAZiwcxFte-Y7NUw"
+            href="https://youtu.be/Z8flr4CEliM"
           >
             <button>Demo Video 🎥</button>
           </a>

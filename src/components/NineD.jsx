@@ -39,7 +39,7 @@ export default function Country() {
           <a
             rel="noreferrer"
             target="_blank"
-            href="https://www.youtube.com/channel/UCxlFAjpYAZiwcxFte-Y7NUw"
+            href="https://youtu.be/gUi3XSYbwLE"
           >
             <button>Demo Video 🎥</button>
           </a>
