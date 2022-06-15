@@ -41,7 +41,7 @@ export default function Country() {
           <a
             rel="noreferrer"
             target="_blank"
-            href="https://youtu.be/txFiM4C9HsA"
+            href="https://youtu.be/YEavG9HLsp8"
           >
             <button>Demo Video 🎥</button>
           </a>
@@ -58,12 +58,10 @@ export default function Country() {
           <img src={herokuIcon} alt="devIcon" title="Heroku" />
         </div>
         <p>
-          RESTful API that gives information on 250+ countries and combined with
-          Bings image search to generate the first four street images of said
-          countries afkjna ksdfbkajfnfa alfjnakjns fkjadsnf aksfjnjk fnajkfay
-          tweets are too twitter afkjnaksdfbkajfnfa alfjnakjnsfkjadsnf
-          aksfjnjkfnajkf ay tweets are too twitter afkjnaksdfbkajfnfa
-          alfjnakjnsfkjadsnf aksfjnjkfnajkf
+          RESTful API with full CRUD support that gives information on 250+
+          countries and combined with Bing's image search to generate the first
+          four street images of said countries. Pair this up with a cool front
+          end and one can make a GeoGuesser Bing Edition {" ;)"}
         </p>
       </div>
     </div>

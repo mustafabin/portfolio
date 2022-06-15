@@ -67,10 +67,10 @@ export default function Hater() {
         </div>
         <p>
           Hater a social media app where users can share hates simaler to the
-          way tweets are too twitter afkjnaksdfbkajfnfa alfjnakjnsfkjadsnf
-          aksfjnjkfnajkfay tweets are too twitter afkjnaksdfbkajfnfa
-          alfjnakjnsfkjadsnf aksfjnjkfnajkf ay tweets are too twitter
-          afkjnaksdfbkajfnfa alfjnakjnsfkjadsnf aksfjnjkfnajkf
+          way tweets are too twitter. Users can interact with each others posts
+          via critisms, dislikes, and rehates. Users are authenticated by Django
+          Knox so as long as their session is valid in the backend the user
+          login persists even if the app is closed.
         </p>
       </div>
     </div>

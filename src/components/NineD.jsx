@@ -54,10 +54,15 @@ export default function Country() {
           <img src={javascriptIcon} alt="devIcon" title="Javascript" />
         </div>
         <p>
-          A Board game with nest tic tac toe games bkajfnfa alfjnakjns fkjadsnf
-          aksfjnjk fnajkfay tweets are too twitter afkjnaksdfbkajfnfa
-          alfjnakjnsfkjadsnf aksfjnjkfnajkf ay tweets are too twitter
-          afkjnaksdfbkajfnfa alfjnakjnsfkjadsnf aksfjnjkfnajkf
+          A Board game with nested tic tac toe games. Full rule set{" "}
+          <a
+            style={{ textDecoration: "none", color: "var(--action-color)" }}
+            href="https://mathwithbaddrawings.com/2013/06/16/ultimate-tic-tac-toe/"
+          >
+            Here
+          </a>
+          . A fun game that seems friendly at first but stacks in complexity as
+          the game prolongs.
         </p>
       </div>
     </div>
