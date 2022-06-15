@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const modeSlice = createSlice({
   name: "mode",
   initialState: {
-    value: "Dark",
+    value: "Light",
   },
   reducers: {
     setValue: (state, action) => {
@@ -30,7 +30,7 @@ export const modeSlice = createSlice({
         state.value = "Light";
         document.body.style.setProperty("--main-color", "#ffffff");
         document.body.style.setProperty("--dark-main-color", "#ffffff");
-        document.body.style.setProperty("--footer-color", "#e5e4cb");
+        document.body.style.setProperty("--footer-color", "#e5e4cb71");
         document.body.style.setProperty("--splash-color", "#ede7f4");
         document.body.style.setProperty(
           "--fade-action-color",
