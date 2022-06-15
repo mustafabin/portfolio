@@ -1,0 +1,10 @@
+.Resume {
+  display: flex;
+  width: 100vw;
+  height: fit-content;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--text-color);
+}
