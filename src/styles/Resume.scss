@@ -33,9 +33,18 @@
     }
   }
 }
-.react-pdf__Page__textContent {
+.react-pdf__Page__canvas {
+  max-width: 90vw;
+  max-height: 110vw;
   border: 1px solid var(--action-color);
+}
+.react-pdf__Page__textContent {
   & span {
     color: transparent;
+  }
+}
+@media (max-width: 700px) {
+  .react-pdf__Page__textContent {
+    display: none;
   }
 }
