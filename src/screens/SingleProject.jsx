@@ -27,6 +27,6 @@ export default function SingleProject() {
 
         break;
     }
-  }, []);
+  }, [num]);
   return <div className="Single-Project ">{content}</div>;
 }

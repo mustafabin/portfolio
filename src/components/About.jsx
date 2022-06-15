@@ -3,24 +3,26 @@ import "../styles/About.scss";
 import ProfilePic from "../media/profile.jpg";
 import { TrackRef } from "../util/viewTracker.js";
 import { useTransition, animated } from "react-spring";
-import reactIcon from "../media/react.svg";
-import reduxIcon from "../media/redux.svg";
 import nodeIcon from "../media/node.svg";
 import mongoDBIcon from "../media/mongoDB.svg";
 import typeIcon from "../media/type.svg";
 import expressIcon from "../media/express.svg";
 import pythonIcon from "../media/python.svg";
-import djangoIcon from "../media/django.svg";
 import flaskIcon from "../media/flask.svg";
+import reactIcon from "../media/react.svg";
+import reduxIcon from "../media/redux.svg";
+import djangoIcon from "../media/django.svg";
 import postgresIcon from "../media/postgres.svg";
-import jwtIcon from "../media/jwt.svg";
-import herokuIcon from "../media/heroku.svg";
-import sassIcon from "../media/sass.svg";
 import cssIcon from "../media/css.svg";
+import herokuIcon from "../media/heroku.svg";
+import netlifyIcon from "../media/netlify.svg";
 import htmlIcon from "../media/html.svg";
+import jwtIcon from "../media/jwt.svg";
+import sassIcon from "../media/sass.svg";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
+
 export default function About() {
   const aboutRef = useRef(null);
   const isAboutVisible = TrackRef(aboutRef, "0px"); //the 0px is the offset to when the effect should take place
@@ -80,10 +82,12 @@ export default function About() {
                   <img src={flaskIcon} alt="devIcon" title="Flask" />
                   <img src={expressIcon} alt="devIcon" title="Express" />
                   <img src={herokuIcon} alt="devIcon" title="Heroku" />
+                  <img src={netlifyIcon} alt="devIcon" title="netlify" />
+
                   <img src={cssIcon} alt="devIcon" title="css3" />
                   <img src={htmlIcon} alt="devIcon" title="HTML5" />
                 </div>
-                <p className="About__contact-title">Contact</p>
+                <p className="About__contact-title">Contact 📬</p>
                 <div className="About__contact_array">
                   <a
                     href="https://www.linkedin.com/in/mustafabinalhag/"
