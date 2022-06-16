@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const modeSlice = createSlice({
   name: "mode",
   initialState: {
-    value: "Light",
+    value: "Dark",
   },
   reducers: {
     setValue: (state, action) => {

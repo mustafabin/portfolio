@@ -3,15 +3,15 @@
   font-family: "IBM Plex Mono", monospace;
 }
 :root {
-  --main-color: #ffffff;
-  --dark-main-color: #ffffff;
-  --splash-color: #ede7f4;
-  --footer-color: #e5e4cb71;
-  --action-color: #d438ff;
-  --fade-action-color: rgba(212, 56, 255, 0.1);
-  --sub-action-color: #07d9d9;
+  --main-color: #2a2f40;
+  --dark-main-color: #212831;
+  --splash-color: #7a2605;
+  --footer-color: #212831;
+  --action-color: #ff8900;
+  --fade-action-color: rgba(255, 137, 0, 0.2);
+  --sub-action-color: #00feff;
   --fade-sub-action-color: rgba(0, 254, 255, 0.2);
-  --text-color: black;
+  --text-color: white;
 }
 body {
   margin: 0;
