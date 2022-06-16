@@ -51,7 +51,6 @@
     margin-bottom: 2rem;
   }
   &__button {
-    background-color: rgba(90, 90, 223, 0.243);
     color: var(--text-color);
     font-weight: bolder;
     font-size: 1.1rem;
@@ -59,14 +58,14 @@
     border-radius: 10px;
     letter-spacing: 1px;
     padding: 0.7rem;
-    border-color: transparent;
+    border: 1px solid rgba(20, 20, 20, 0.517);
     margin-bottom: 3rem;
     display: flex;
     align-items: center;
     &:hover {
-      background-color: rgba(90, 223, 126, 0.243);
+      cursor: pointer;
+      background-color: var(--fade-sub-action-color) !important;
       font-weight: bolder;
-      border: 1px solid rgba(90, 223, 126, 0.243);
     }
     & .learn-more-icon {
       font-size: 2rem;

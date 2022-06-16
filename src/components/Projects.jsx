@@ -53,6 +53,7 @@ export default function Projects() {
     <div className="Project" id="Projects">
       <h1 className="Project__title">My Projects 🎨</h1>
       <button
+        style={{ backgroundColor: "rgba(68, 60, 254, 0.1)" }}
         className="virtual-card__button exaggerate-button"
         onClick={handleExaggeration}
       >
@@ -82,6 +83,7 @@ export default function Projects() {
             onClick={() => {
               navigate("/project/1");
             }}
+            style={{ backgroundColor: "rgba(235, 66, 108, 0.25)" }}
             className="virtual-card__button"
             variant="outlined"
           >
@@ -112,6 +114,7 @@ export default function Projects() {
           <h3>E-Commerce site</h3>
           <img src={cosmosImage} alt="Cosmos" />
           <button
+            style={{ backgroundColor: "rgba(142, 66, 235,0.25" }}
             onClick={() => {
               navigate("/project/2");
             }}
@@ -145,6 +148,7 @@ export default function Projects() {
           <h3>Board Game</h3>
           <img src={NineDImage} alt="9-D board game" />
           <button
+            style={{ backgroundColor: "rgba(66, 122, 235, 0.25)" }}
             onClick={() => {
               navigate("/project/3");
             }}
@@ -178,6 +182,7 @@ export default function Projects() {
           <h3>JSON API</h3>
           <img src={countryImage} alt="Street API" />
           <button
+            style={{ backgroundColor: "rgba(117, 235, 66, 0.25)" }}
             onClick={() => {
               navigate("/project/4");
             }}
