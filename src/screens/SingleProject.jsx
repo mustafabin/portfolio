@@ -28,8 +28,9 @@ export default function SingleProject() {
             <h1 style={{ maxWidth: "80%" }}>
               Wrong param you entered{" "}
               <span style={{ color: "red" }}>{num}</span> and I only have{" "}
-              <span style={{ color: "green" }}>4</span> projects displayed on my
-              site. Checkout my github if you want to see more 😘
+              <span style={{ color: "var(--action-color)" }}>4</span> projects
+              displayed on my site. Checkout my github if you want to see more
+              😘
             </h1>
           </div>
         );

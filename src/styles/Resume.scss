@@ -8,12 +8,12 @@
   flex-direction: column;
   color: var(--text-color);
   &__pdf-container {
-    margin-top: 15vh;
+    margin-top: 20vh;
   }
   &__download {
     text-decoration: none;
     & button {
-      background-color: rgba(90, 90, 223, 0.243);
+      background-color: rgba(177, 177, 231, 0.243);
       color: var(--text-color);
       font-weight: bolder;
       font-size: 1.4rem;
@@ -21,14 +21,14 @@
       border-radius: 10px;
       letter-spacing: 1.5px;
       padding: 1rem;
-      border: 1px solid transparent;
+      border: 1px solid rgba(177, 177, 231, 0.243);
       margin-bottom: 10vh;
       display: flex;
       align-items: center;
       &:hover {
-        background-color: rgba(90, 223, 126, 0.243);
+        background-color: var(--fade-action-color);
         font-weight: bolder;
-        border: 1px solid rgba(90, 223, 126, 0.243);
+        border-color: var(--action-color);
       }
     }
   }
