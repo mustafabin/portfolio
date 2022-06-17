@@ -12,6 +12,7 @@
   --sub-action-color: #00feff;
   --fade-sub-action-color: rgba(0, 254, 255, 0.2);
   --text-color: white;
+  --projecthover-color: #2128314a;
 }
 body {
   margin: 0;

@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import mainSrc from "../media/9d.png";
 import htmlIcon from "../media/html.svg";
 import cssIcon from "../media/css.svg";
 import javascriptIcon from "../media/javascript.svg";
 export default function Country() {
+  useEffect(() => {
+    document.body.style.setProperty(
+      "--projecthover-color",
+      "rgba(49, 49, 221,0.3)"
+    );
+  }, []);
   return (
     <div className="SingleProject">
       <div className="SingleProject__top__row">

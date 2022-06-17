@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import laptopSrc from "../media/hater.png";
 import phoneSrc from "../media/moblieHater.png";
 import reactIcon from "../media/react.svg";
@@ -9,6 +9,12 @@ import herokuIcon from "../media/heroku.svg";
 import pythonIcon from "../media/python.svg";
 import netlifyIcon from "../media/netlify.svg";
 export default function Hater() {
+  useEffect(() => {
+    document.body.style.setProperty(
+      "--projecthover-color",
+      "rgba(255, 0, 64, 0.3)"
+    );
+  }, []);
   return (
     <div className="SingleProject">
       <div className="SingleProject__top__row">

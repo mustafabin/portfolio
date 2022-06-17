@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import mainSrc from "../media/country.png";
 
 import mongoDBIcon from "../media/mongoDB.svg";
@@ -6,6 +6,12 @@ import expressIcon from "../media/express.svg";
 import nodeIcon from "../media/node.svg";
 import herokuIcon from "../media/heroku.svg";
 export default function Country() {
+  useEffect(() => {
+    document.body.style.setProperty(
+      "--projecthover-color",
+      "rgba(62, 159, 62, 0.3)"
+    );
+  }, []);
   return (
     <div className="SingleProject">
       <div className="SingleProject__top__row">
