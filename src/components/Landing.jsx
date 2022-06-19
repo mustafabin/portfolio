@@ -1,12 +1,16 @@
 import React, { useEffect, useRef } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import "../styles/Landing.scss";
 import Typewriter from "typewriter-effect";
 import normalSprite from "../media/normal.png";
+import normalGlassesSprite from "../media/glassesNormal.png";
 import upSprite from "../media/up.png";
+import upGlassesSprite from "../media/glassesUp.png";
+import { toggleGlasses } from "../redux/sprite.js";
 export default function Landing() {
+  const dispatch = useDispatch();
   const sprite = useRef(null);
-  const src = useSelector((state) => state.sprite.value);
+  const spriteValues = useSelector((state) => state.sprite);
 
   let handleSpriteScroll = () => {
     window.scrollY > 1600
@@ -61,7 +65,21 @@ export default function Landing() {
         </div>
         <div ref={sprite} className="landing__image__container">
           <img
-            src={src === "normal" ? normalSprite : upSprite}
+            onClick={() => dispatch(toggleGlasses())}
+            src={
+              spriteValues.direction === "normal"
+                ? spriteValues.glasses
+                  ? normalGlassesSprite
+                  : normalSprite
+                : spriteValues.glasses
+                ? upGlassesSprite
+                : upSprite
+            }
+            title={
+              spriteValues.glasses
+                ? "Click to remove glasses ❌"
+                : "Click me to give me glasses 😎"
+            }
             alt="Mustafa's sprite"
           />
         </div>
