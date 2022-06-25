@@ -55,9 +55,8 @@ export default function About() {
               <animated.div className="About__animated__div" style={style}>
                 <p className="About__text__content">
                   I am a Full Stack Developer based in Queens NYC, experienced
-                  in using SQL databases via PostgreSQL and non-relational
-                  datastructures such as MongoDB to build robust RESTful APIs or
-                  with front end frameworks like React.js.
+                  in building full stack apps. I love learning and leveraging
+                  code to bring about positive experiences.
                 </p>
               </animated.div>
             ) : (
