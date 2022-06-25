@@ -66,7 +66,10 @@ export default function Projects() {
             setstyleOne.start({ xys: calc(x, y) })
           }
           onMouseLeave={() => setstyleOne.start({ xys: [0, 0, 1] })}
-          style={{ transform: styleOne.xys.to(trans) }}
+          style={{
+            transform: styleOne.xys.to(trans),
+            "border-color": "rgba(235, 66, 108, 0.5)",
+          }}
         >
           <h1
             className="virtual-card__title"
@@ -100,7 +103,10 @@ export default function Projects() {
             setstyleTwo.start({ xys: calc(x, y) })
           }
           onMouseLeave={() => setstyleTwo.start({ xys: [0, 0, 1] })}
-          style={{ transform: styleTwo.xys.to(trans) }}
+          style={{
+            transform: styleTwo.xys.to(trans),
+            "border-color": "rgba(142, 66, 235,0.5",
+          }}
         >
           <h1
             className="virtual-card__title"
@@ -134,7 +140,10 @@ export default function Projects() {
             setstyleThree.start({ xys: calc(x, y) })
           }
           onMouseLeave={() => setstyleThree.start({ xys: [0, 0, 1] })}
-          style={{ transform: styleThree.xys.to(trans) }}
+          style={{
+            transform: styleThree.xys.to(trans),
+            "border-color": "rgba(66, 122, 235, 0.5)",
+          }}
         >
           <h1
             className="virtual-card__title"
@@ -168,7 +177,10 @@ export default function Projects() {
             setstyleFour.start({ xys: calc(x, y) })
           }
           onMouseLeave={() => setstyleFour.start({ xys: [0, 0, 1] })}
-          style={{ transform: styleFour.xys.to(trans) }}
+          style={{
+            transform: styleFour.xys.to(trans),
+            "border-color": "rgba(117, 235, 66, 0.5)",
+          }}
         >
           <h1
             className="virtual-card__title"
