@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import haterImage from "../media/hater.png";
+import cash4Image from "../media/cash4watches.png";
 import cosmosImage from "../media/cosmos.png";
 import NineDImage from "../media/9d.png";
 import countryImage from "../media/country.png";
@@ -60,6 +61,43 @@ export default function Projects() {
         {buttonText}
       </button>
       <div className="Project__virtual__container">
+        <animated.div
+          className="virtual-card"
+          onMouseMove={({ clientX: x, clientY: y }) =>
+            setstyleOne.start({ xys: calc(x, y) })
+          }
+          onMouseLeave={() => setstyleOne.start({ xys: [0, 0, 1] })}
+          style={{
+            transform: styleOne.xys.to(trans),
+            "border-color": "rgba(255, 196, 0, 0.5)",
+          }}
+        >
+          <h1
+            className="virtual-card__title"
+            style={{
+              background:
+                "linear-gradient(180deg, transparent 70%,rgba(255, 196, 0, 0.5) 70%,rgba(255, 196, 0, 0.5) 87%,transparent 87%)",
+            }}
+          >
+            Cash4Watches ⌚️💵
+          </h1>
+          <h3>Freelance site</h3>
+          <img src={cash4Image} alt="Hater" />
+          <button
+            onClick={() => {
+              navigate("/project/5");
+            }}
+            style={{ backgroundColor: "rgba(255, 196, 0, 0.5)" }}
+            className="virtual-card__button"
+            variant="outlined"
+          >
+            Learn More
+            <ReadMoreIcon
+              className="learn-more-icon"
+              fontSize="inherit"
+            ></ReadMoreIcon>
+          </button>
+        </animated.div>
         <animated.div
           className="virtual-card"
           onMouseMove={({ clientX: x, clientY: y }) =>

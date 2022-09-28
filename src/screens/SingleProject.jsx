@@ -5,6 +5,7 @@ import Hater from "../components/Hater.jsx";
 import NineD from "../components/NineD.jsx";
 import Cosmos from "../components/Cosmos.jsx";
 import Country from "../components/Country.jsx";
+import Cash4Watches from "../components/Cash4Watches.jsx";
 export default function SingleProject() {
   let { num } = useParams();
   const [content, setContent] = useState(<h1>Init</h1>);
@@ -21,6 +22,9 @@ export default function SingleProject() {
         break;
       case "4":
         setContent(<Country />);
+        break;
+      case "5":
+        setContent(<Cash4Watches />);
         break;
       default:
         setContent(

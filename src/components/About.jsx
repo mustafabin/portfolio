@@ -13,12 +13,10 @@ import reactIcon from "../media/react.svg";
 import reduxIcon from "../media/redux.svg";
 import djangoIcon from "../media/django.svg";
 import postgresIcon from "../media/postgres.svg";
-import cssIcon from "../media/css.svg";
-import herokuIcon from "../media/heroku.svg";
-import netlifyIcon from "../media/netlify.svg";
-import htmlIcon from "../media/html.svg";
 import jwtIcon from "../media/jwt.svg";
 import sassIcon from "../media/sass.svg";
+import rubyImage from "../media/ruby-plain.svg";
+import railsImage from "../media/rails-plain.svg";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
@@ -68,23 +66,20 @@ export default function About() {
               <animated.div className="About__animated__div" style={style}>
                 <p className="About__skills__header">My Stacks 📚</p>
                 <div className="About__image_array">
-                  <img src={postgresIcon} alt="devIcon" title="PostgreSQL" />
-                  <img src={typeIcon} alt="devIcon" title="Typescript" />
-                  <img src={djangoIcon} alt="devIcon" title="Django" />
                   <img src={pythonIcon} alt="devIcon" title="Python" />
+                  <img src={rubyImage} alt="devIcon" title="Ruby" />
+                  <img src={djangoIcon} alt="devIcon" title="Django" />
+                  <img src={railsImage} alt="devIcon" title="Rails" />
+                  <img src={typeIcon} alt="devIcon" title="Typescript" />
                   <img src={jwtIcon} alt="devIcon" title="Json Web Tokens" />
-                  <img src={mongoDBIcon} alt="devIcon" title="MongoDB" />
                   <img src={reactIcon} alt="devIcon" title="React.js" />
                   <img src={reduxIcon} alt="devIcon" title="Redux" />
                   <img src={sassIcon} alt="devIcon" title="Sass" />
                   <img src={nodeIcon} alt="devIcon" title="Node.js" />
                   <img src={flaskIcon} alt="devIcon" title="Flask" />
                   <img src={expressIcon} alt="devIcon" title="Express" />
-                  <img src={herokuIcon} alt="devIcon" title="Heroku" />
-                  <img src={netlifyIcon} alt="devIcon" title="netlify" />
-
-                  <img src={cssIcon} alt="devIcon" title="css3" />
-                  <img src={htmlIcon} alt="devIcon" title="HTML5" />
+                  <img src={mongoDBIcon} alt="devIcon" title="MongoDB" />
+                  <img src={postgresIcon} alt="devIcon" title="PostgreSQL" />
                 </div>
                 <p className="About__contact-title">Contact 📬</p>
                 <div className="About__contact_array">
