@@ -63,8 +63,10 @@ export default function Cash4Watches() {
           >
             Cash4watches.com
           </a>
-          is a watch purchasing site contracted by Das Incentives Llc developed
-          to automate their current business methods.
+          is a watch consignment site contracted by Das Incentives Llc and was
+          developed to automate their handling of clientele. In the form of
+          automatic generation of shipping labels and improved communication to
+          their user base through a website interface
         </p>
       </div>
     </div>
