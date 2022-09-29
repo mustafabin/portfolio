@@ -8,6 +8,16 @@
 }
 .SingleProject {
   padding-top: 15vh;
+  &-link {
+    text-decoration: none;
+    color: rgb(255, 166, 2);
+    padding-right: 1rem;
+    text-shadow: 0px 0px 2px rgba(247, 218, 112, 0.486);
+    &:hover {
+      text-shadow: 0px 0px 0.5px var(--action-color);
+      color: var(--action-color);
+    }
+  }
   &__top__row {
     display: flex;
     flex-wrap: wrap;

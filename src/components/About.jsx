@@ -66,16 +66,16 @@ export default function About() {
               <animated.div className="About__animated__div" style={style}>
                 <p className="About__skills__header">My Stacks 📚</p>
                 <div className="About__image_array">
-                  <img src={pythonIcon} alt="devIcon" title="Python" />
                   <img src={rubyImage} alt="devIcon" title="Ruby" />
-                  <img src={djangoIcon} alt="devIcon" title="Django" />
+                  <img src={pythonIcon} alt="devIcon" title="Python" />
+                  <img src={nodeIcon} alt="devIcon" title="Node.js" />
                   <img src={railsImage} alt="devIcon" title="Rails" />
-                  <img src={typeIcon} alt="devIcon" title="Typescript" />
-                  <img src={jwtIcon} alt="devIcon" title="Json Web Tokens" />
+                  <img src={djangoIcon} alt="devIcon" title="Django" />
                   <img src={reactIcon} alt="devIcon" title="React.js" />
                   <img src={reduxIcon} alt="devIcon" title="Redux" />
+                  <img src={typeIcon} alt="devIcon" title="Typescript" />
+                  <img src={jwtIcon} alt="devIcon" title="Json Web Tokens" />
                   <img src={sassIcon} alt="devIcon" title="Sass" />
-                  <img src={nodeIcon} alt="devIcon" title="Node.js" />
                   <img src={flaskIcon} alt="devIcon" title="Flask" />
                   <img src={expressIcon} alt="devIcon" title="Express" />
                   <img src={mongoDBIcon} alt="devIcon" title="MongoDB" />

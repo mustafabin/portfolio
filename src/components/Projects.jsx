@@ -81,7 +81,7 @@ export default function Projects() {
           >
             Cash4Watches ⌚️💵
           </h1>
-          <h3>Freelance site</h3>
+          <h3>Contracted app</h3>
           <img src={cash4Image} alt="Hater" />
           <button
             onClick={() => {
@@ -118,7 +118,7 @@ export default function Projects() {
           >
             Hater 🐥👺
           </h1>
-          <h3>Social media app</h3>
+          <h3>Social media</h3>
           <img src={haterImage} alt="Hater" />
           <button
             onClick={() => {
@@ -155,7 +155,7 @@ export default function Projects() {
           >
             Cosmos 🔭🌍
           </h1>
-          <h3>E-Commerce site</h3>
+          <h3>E-Commerce</h3>
           <img src={cosmosImage} alt="Cosmos" />
           <button
             style={{ backgroundColor: "rgba(142, 66, 235,0.25" }}

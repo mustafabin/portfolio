@@ -8,6 +8,7 @@ import postgresIcon from "../media/postgres.svg";
 import herokuIcon from "../media/heroku.svg";
 import rubyIcon from "../media/ruby-plain.svg";
 import netlifyIcon from "../media/netlify.svg";
+import amazonIcon from "../media/amazons3.svg";
 export default function Cash4Watches() {
   useEffect(() => {
     document.body.style.setProperty(
@@ -44,16 +45,27 @@ export default function Cash4Watches() {
       <div className="SingleProject__bottom_container">
         <h1>Tech Used 🖥</h1>
         <div className="SingleProject__image__array__container">
-          <img src={postgresIcon} alt="devIcon" title="PostgreSQL" />
+          <img src={amazonIcon} alt="devIcon" title="Amazon S3" />
           <img src={railsIcon} alt="devIcon" title="Rails" />
           <img src={rubyIcon} alt="devIcon" title="Ruby" />
+          <img src={postgresIcon} alt="devIcon" title="PostgreSQL" />
           <img src={reactIcon} alt="devIcon" title="React.js" />
           <img src={reduxIcon} alt="devIcon" title="Redux" />
-
           <img src={herokuIcon} alt="devIcon" title="Heroku" />
           <img src={netlifyIcon} alt="devIcon" title="netlify" />
         </div>
-        <p>Cash4watches is a freelance site ...</p>
+        <p>
+          <a
+            className="SingleProject-link"
+            rel="noreferrer"
+            target="_blank"
+            href="https://cash4watches.com/"
+          >
+            Cash4watches.com
+          </a>
+          is a watch purchasing site contracted by Das Incentives Llc developed
+          to automate their current business methods.
+        </p>
       </div>
     </div>
   );
