@@ -79,7 +79,7 @@ export default function Projects() {
                 "linear-gradient(180deg, transparent 70%,rgba(255, 196, 0, 0.5) 70%,rgba(255, 196, 0, 0.5) 87%,transparent 87%)",
             }}
           >
-            Cash4Watches ⌚️💵
+            Cash4Watches⌚️💵
           </h1>
           <h3>Contracted app</h3>
           <img src={cash4Image} alt="Hater" />

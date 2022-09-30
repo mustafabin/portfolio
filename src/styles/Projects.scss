@@ -70,6 +70,11 @@
       font-size: 2rem;
     }
   }
+  &__title {
+    // color: red;
+    font-size: 100%;
+    flex-shrink: 0;
+  }
 }
 .exaggerate-button {
   margin: 2rem;
