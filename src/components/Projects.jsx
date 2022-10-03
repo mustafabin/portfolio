@@ -28,6 +28,10 @@ export default function Projects() {
     xys: AnimationDefaults.xys,
     config: AnimationDefaults.config,
   }));
+  const [styleZero, setstyleZero] = useSpring(() => ({
+    xys: AnimationDefaults.xys,
+    config: AnimationDefaults.config,
+  }));
   const [styleTwo, setstyleTwo] = useSpring(() => ({
     xys: AnimationDefaults.xys,
     config: AnimationDefaults.config,
@@ -64,11 +68,11 @@ export default function Projects() {
         <animated.div
           className="virtual-card"
           onMouseMove={({ clientX: x, clientY: y }) =>
-            setstyleOne.start({ xys: calc(x, y) })
+            setstyleZero.start({ xys: calc(x, y) })
           }
-          onMouseLeave={() => setstyleOne.start({ xys: [0, 0, 1] })}
+          onMouseLeave={() => setstyleZero.start({ xys: [0, 0, 1] })}
           style={{
-            transform: styleOne.xys.to(trans),
+            transform: styleZero.xys.to(trans),
             "border-color": "rgba(255, 196, 0, 0.5)",
           }}
         >

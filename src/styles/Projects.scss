@@ -70,12 +70,13 @@
       font-size: 2rem;
     }
   }
-  &__title {
-    // color: red;
-    font-size: 100%;
-    flex-shrink: 0;
-  }
 }
 .exaggerate-button {
   margin: 2rem;
+}
+
+@media (max-width: 450px) {
+  .virtual-card__title {
+    font-size: 1.3rem;
+  }
 }
