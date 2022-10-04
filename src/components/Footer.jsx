@@ -22,7 +22,7 @@ export default function Footer() {
         >
           <GitHubIcon className="contact_item" fontSize="inherit" />
         </a>
-        <a href="mailto:mbin828@gmail.com">
+        <a href="mailto:mustafa@binalhag.dev">
           <EmailIcon className="contact_item" fontSize="inherit" />
         </a>
       </div>
