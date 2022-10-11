@@ -52,9 +52,9 @@ export default function About() {
             item ? (
               <animated.div className="About__animated__div" style={style}>
                 <p className="About__text__content">
-                  I am a Full Stack Developer based in Queens NYC, experienced
-                  in building full stack apps. I love learning and leveraging
-                  code to bring about positive experiences.
+                  I am a Software Engineer based in Queens NYC, experienced in
+                  building full stack apps. I love learning and leveraging code
+                  to bring about positive experiences.
                 </p>
               </animated.div>
             ) : (

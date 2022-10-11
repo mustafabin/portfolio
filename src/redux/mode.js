@@ -38,7 +38,7 @@ export const modeSlice = createSlice({
         );
         document.body.style.setProperty(
           "--fade-sub-action-color",
-          "rgba(7, 217, 217, 0.2)"
+          "rgba(112, 7, 217, 0.2)"
         );
         document.body.style.setProperty("--action-color", "#d438ff");
         document.body.style.setProperty("--sub-action-color", "#07d9d9");
