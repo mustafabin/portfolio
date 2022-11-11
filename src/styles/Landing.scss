@@ -15,6 +15,7 @@
     position: fixed;
     transition: opacity ease 0.15s;
     transition: transform ease 0.5s;
+    z-index: 10;
     & img {
       width: 250px;
       height: 250px;

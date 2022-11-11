@@ -71,8 +71,8 @@ export default function Hater() {
           <img src={netlifyIcon} alt="devIcon" title="netlify" />
         </div>
         <p>
-          Hater a social media app where users can share hates simaler to the
-          way tweets are too twitter. Users can interact with each others posts
+          Hater a social media app where users can share hates similar to the
+          way tweets are to twitter. Users can interact with each others posts
           via critisms, dislikes, and rehates. Users are authenticated by Django
           Knox so as long as their session is valid in the backend the user
           login persists even if the app is closed.

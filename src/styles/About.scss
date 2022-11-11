@@ -26,20 +26,20 @@
   }
   &__image__container {
     margin: 3rem;
-    border: 1.5px solid var(--action-color);
+    border: 1px solid var(--action-color);
     width: 45vw;
     height: 45vw;
     max-width: 350px;
     max-height: 350px;
     min-height: 100px;
-    border-radius: 3rem;
+    border-radius: 10px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all ease 0.25s;
     background-color: rgba(35, 4, 4, 0.459);
-    filter: drop-shadow(0px 0px 2rem var(--fade-sub-action-color));
+    filter: drop-shadow(0px 0px 1rem var(--fade-sub-action-color));
 
     & img {
       flex-shrink: 0;

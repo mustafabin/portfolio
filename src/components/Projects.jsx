@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import haterImage from "../media/hater.png";
+import fishImage from "../media/savefish.png";
 import cash4Image from "../media/cash4watches.png";
 import cosmosImage from "../media/cosmos.png";
 import NineDImage from "../media/9d.png";
@@ -44,6 +45,10 @@ export default function Projects() {
     xys: AnimationDefaults.xys,
     config: AnimationDefaults.config,
   }));
+  const [styleFive, setstyleFive] = useSpring(() => ({
+    xys: AnimationDefaults.xys,
+    config: AnimationDefaults.config,
+  }));
   let handleExaggeration = () => {
     if (xStiffness !== 1) {
       setxStiffness(1);
@@ -54,7 +59,7 @@ export default function Projects() {
       setButtonText("Exaggerate Animation 🥵");
     }
   };
-  return (
+  return ( 
     <div className="Project" id="Projects">
       <h1 className="Project__title">My Projects 🎨</h1>
       <button
@@ -65,6 +70,43 @@ export default function Projects() {
         {buttonText}
       </button>
       <div className="Project__virtual__container">
+        <animated.div
+          className="virtual-card"
+          onMouseMove={({ clientX: x, clientY: y }) =>
+            setstyleFive.start({ xys: calc(x, y) })
+          }
+          onMouseLeave={() => setstyleFive.start({ xys: [0, 0, 1] })}
+          style={{
+            transform: styleFive.xys.to(trans),
+            "border-color": "rgb(132, 76, 247)",
+          }}
+        >
+          <h1
+            className="virtual-card__title"
+            style={{
+              background:
+                "linear-gradient(180deg, transparent 70%,rgb(132, 76, 247,0.7) 70%,rgb(132, 76, 247,0.7) 87%,transparent 87%)",
+            }}
+          >
+            Mozam 🚀🎣
+          </h1>
+          <h3>24hr Hackathon</h3>
+          <img src={fishImage} alt="Fish" />
+          <button
+            onClick={() => {
+              navigate("/project/6");
+            }}
+            style={{ backgroundColor: "rgb(132, 76, 247)" }}
+            className="virtual-card__button"
+            variant="outlined"
+          >
+            Learn More
+            <ReadMoreIcon
+              className="learn-more-icon"
+              fontSize="inherit"
+            ></ReadMoreIcon>
+          </button>
+        </animated.div>
         <animated.div
           className="virtual-card"
           onMouseMove={({ clientX: x, clientY: y }) =>
