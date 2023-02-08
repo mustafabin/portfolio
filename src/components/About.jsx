@@ -10,6 +10,7 @@ import expressIcon from "../media/express.svg";
 import pythonIcon from "../media/python.svg";
 import flaskIcon from "../media/flask.svg";
 import reactIcon from "../media/react.svg";
+import nextIcon from "../media/next.svg";
 import reduxIcon from "../media/redux.svg";
 import djangoIcon from "../media/django.svg";
 import postgresIcon from "../media/postgres.svg";
@@ -72,6 +73,7 @@ export default function About() {
                   <img src={railsImage} alt="devIcon" title="Rails" />
                   <img src={djangoIcon} alt="devIcon" title="Django" />
                   <img src={reactIcon} alt="devIcon" title="React.js" />
+                  <img src={nextIcon} alt="devIcon" title="Next.js" />
                   <img src={reduxIcon} alt="devIcon" title="Redux" />
                   <img src={typeIcon} alt="devIcon" title="Typescript" />
                   <img src={jwtIcon} alt="devIcon" title="Json Web Tokens" />
