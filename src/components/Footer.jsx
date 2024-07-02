@@ -6,7 +6,7 @@ import EmailIcon from "@mui/icons-material/Email";
 export default function Footer() {
   return (
     <div className="Footer" id="Footer">
-      <p>2022 | Created by yours truly 😌</p>
+      <p>2022 | Created and self hosted by yours truly 😌</p>
       <div className="Footer__contact_container">
         <a
           href="https://www.linkedin.com/in/mustafabinalhag/"
