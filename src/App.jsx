@@ -19,7 +19,6 @@ function App() {
           element={
             <>
               <Landing></Landing>
-              <About></About>
               <Projects></Projects>
             </>
           }

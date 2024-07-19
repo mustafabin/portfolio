@@ -36,7 +36,7 @@ export default function Landing() {
                 typewriter
                   .pauseFor(500)
                   .typeString("Hey ! :)")
-                  .pauseFor(350)
+                  .pauseFor(150)
                   .deleteAll()
                   .pauseFor(200)
                   .typeString(
