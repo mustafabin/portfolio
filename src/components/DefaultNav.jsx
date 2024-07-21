@@ -1,17 +1,17 @@
-import React from "react";
-import { HashLink } from "react-router-hash-link";
-import HomeIcon from "@mui/icons-material/Home";
-import FolderIcon from "@mui/icons-material/Folder";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import ArticleIcon from "@mui/icons-material/Article";
-import WhiteBrandVideo from "../media/white-brand.gif";
-import DarkBrandVideo from "../media/dark-brand.gif";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import { toggleValue } from "../redux/mode.js";
-import { styled } from "@mui/material/styles";
-import Switch from "@mui/material/Switch";
-import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import React from "react"
+import { HashLink } from "react-router-hash-link"
+import HomeIcon from "@mui/icons-material/Home"
+import FolderIcon from "@mui/icons-material/Folder"
+import AccountCircleIcon from "@mui/icons-material/AccountCircle"
+import ArticleIcon from "@mui/icons-material/Article"
+import WhiteBrandVideo from "../media/white-brand.gif"
+import DarkBrandVideo from "../media/dark-brand.gif"
+import FormControlLabel from "@mui/material/FormControlLabel"
+import { toggleValue } from "../redux/mode.js"
+import { styled } from "@mui/material/styles"
+import Switch from "@mui/material/Switch"
+import { useSelector, useDispatch } from "react-redux"
+import { useNavigate } from "react-router-dom"
 
 export const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -59,47 +59,42 @@ export const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     backgroundColor: "#fe8802",
     borderRadius: 20 / 2,
   },
-}));
+}))
 export default function DefaultNav() {
-  let navigate = useNavigate();
-  const dispatch = useDispatch();
-  const mode = useSelector((state) => state.mode.value);
+  let navigate = useNavigate()
+  const dispatch = useDispatch()
+  const mode = useSelector((state) => state.mode.value)
   return (
     <>
-      <div className="nav-brand-container">
+      <div className='nav-brand-container'>
         <img
           onClick={() => navigate("/")}
           src={mode === "Light" ? WhiteBrandVideo : DarkBrandVideo}
-          alt="brand"
-          className="nav-brand-video"
-        ></img>
+          alt='brand'
+          className='nav-brand-video'></img>
       </div>
-      <div className="nav-link-container">
-        <HashLink smooth to="/#Landing">
-          <HomeIcon fontSize="large"></HomeIcon>
+      <div className='nav-link-container'>
+        <HashLink smooth to='/#Landing'>
+          <HomeIcon fontSize='large'></HomeIcon>
           Home
         </HashLink>
-        <HashLink smooth to="/#About">
-          <AccountCircleIcon fontSize="large"></AccountCircleIcon>
-          About
-        </HashLink>
-        <HashLink smooth to="/#Projects">
-          <FolderIcon fontSize="large"></FolderIcon>
+        <HashLink smooth to='/#Projects'>
+          <FolderIcon fontSize='large'></FolderIcon>
           Projects
         </HashLink>
-        <HashLink smooth to="/resume/#Resume">
-          <ArticleIcon fontSize="large"></ArticleIcon>
+        <HashLink smooth to='/resume/#Resume'>
+          <ArticleIcon fontSize='large'></ArticleIcon>
           Resume
         </HashLink>
       </div>
-      <div className="nav-mode-switch">
+      <div className='nav-mode-switch'>
         <FormControlLabel
           onChange={() => dispatch(toggleValue())}
           control={
             <MaterialUISwitch
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
-                  dispatch(toggleValue());
+                  dispatch(toggleValue())
                 }
               }}
               sx={{ m: 1 }}
@@ -109,5 +104,5 @@ export default function DefaultNav() {
         />
       </div>
     </>
-  );
+  )
 }

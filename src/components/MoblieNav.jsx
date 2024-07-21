@@ -96,10 +96,6 @@ export default function MoblieNav() {
             <HomeIcon fontSize="large"></HomeIcon>
             <p>Home</p>
           </HashLink>
-          <HashLink onClick={() => handleClick()} smooth to="/#About">
-            <AccountCircleIcon fontSize="large"></AccountCircleIcon>
-            <p>About</p>
-          </HashLink>
           <HashLink onClick={() => handleClick()} smooth to="/#Projects">
             <FolderIcon fontSize="large"></FolderIcon>
             <p>Projects</p>

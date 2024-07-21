@@ -1,48 +1,42 @@
-import "./styles/App.scss";
-import "./styles/BreakPoints.scss";
-import { Routes, Route, useNavigate } from "react-router-dom";
-import Navbar from "./components/Nav.jsx";
-import Landing from "./components/Landing.jsx";
-import About from "./components/About.jsx";
-import Projects from "./components/Projects.jsx";
-import Footer from "./components/Footer.jsx";
-import Resume from "./screens/Resume.jsx";
-import SingleProject from "./screens/SingleProject.jsx";
+import "./styles/App.scss"
+import "./styles/BreakPoints.scss"
+import { Routes, Route, useNavigate } from "react-router-dom"
+import Navbar from "./components/Nav.jsx"
+import Landing from "./components/Landing.jsx"
+import Projects from "./components/Projects.jsx"
+import Footer from "./components/Footer.jsx"
+import Resume from "./screens/Resume.jsx"
+import SingleProject from "./screens/SingleProject.jsx"
 function App() {
-  let navigate = useNavigate();
+  let navigate = useNavigate()
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar/>
       <Routes>
         <Route
-          path="/"
+          path='/'
           element={
             <>
-              <Landing></Landing>
-              <Projects></Projects>
+              <Landing />
+              <Projects />
             </>
-          }
-        ></Route>
+          }></Route>
+        <Route path='/project/:num' element={<SingleProject />}></Route>
+        <Route path='/resume' element={<Resume />}></Route>
         <Route
-          path="/project/:num"
-          element={<SingleProject></SingleProject>}
-        ></Route>
-        <Route path="/resume" element={<Resume></Resume>}></Route>
-        <Route
-          path="*"
+          path='*'
           element={
             <>
-              <div className="fullscreen">
+              <div className='fullscreen'>
                 <h1>Wrong Url </h1>
                 <button onClick={() => navigate("/")}>Go Home</button>
               </div>
             </>
-          }
-        ></Route>
+          }></Route>
       </Routes>
-      <Footer></Footer>
+      <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
