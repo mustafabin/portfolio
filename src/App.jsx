@@ -18,7 +18,7 @@ function App() {
           element={
             <>
               <Landing />
-              <Projects />
+              {/* <Projects /> */}
             </>
           }></Route>
         <Route path='/project/:num' element={<SingleProject />}></Route>
